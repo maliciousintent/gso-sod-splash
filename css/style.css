@@ -1436,7 +1436,7 @@ textarea.comment-input{
     }
     .right.col-50{
         width: 100%;
-        position: absolute;
+        position: relative;
         right: 0;
         left: 0;
         z-index: 5;
@@ -1547,9 +1547,68 @@ img.logo{
     top: 60%;
 }
 p.soon-desc {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 h2.title {
     font-size: 3.2rem;
     margin-top: 10px;
+}
+.subscribe-btn {
+    width: 30rem;
+}
+.subscribe .email-input {
+    width: 24rem;
+    margin-right: 0;
+    float: left;
+    padding: 1.3rem 1rem;
+}
+.subscribe .email-btn {
+    float: right;
+    margin-right: 0;
+}
+
+.c-clock {
+    position: relative;
+    height: 40rem;
+}
+.partner {
+    width: 150px;
+    height: 48px;
+}
+.partner-fix {
+    width: 150px;
+    height: 86.5px;
+}
+
+.partners {
+    -webkit-transition: 1s;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    opacity: 1;
+    
+    -webkit-transition-delay: 1.2s;
+    -moz-transition-delay: 1.2s;
+    -ms-transition-delay: 1.2s;
+    transition-delay: 1.2s;
+    
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+    opacity: 1;
+    margin: 5rem 0;
+
+    text-align: center;
+}
+.partners.start {
+    opacity: 0;
+}
+
+
+
+@media screen and (max-width: 360px) {
+    .c-clock {
+        height: 40rem;
+    }
 }

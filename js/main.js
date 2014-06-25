@@ -41,6 +41,6 @@ $(window).load(function(){
     $('.subscribe').removeClass('start');
     $('.dialog-btn').removeClass('start');
     $('.clock-layout').removeClass('start');
-
+    $('.partners').removeClass('start');
 
 });
