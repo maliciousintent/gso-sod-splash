@@ -1,0 +1,78 @@
+.c-layout
+  width 100%
+  height 100%
+  position absolute
+  top 0
+  left 0
+  transition all 5s ease
+
+.c-layout.c-metric
+  background url('../img/clock/metrics.svg')
+  background-repeat no-repeat
+  background-size 100% 100%
+
+
+/* MINUTES */
+.c-layout.c-minute
+  background url('../img/clock/minutes.svg')
+  background-repeat no-repeat
+  background-size 100% 100%
+
+
+/* SECONDS */
+.c-layout.c-second
+  background url('../img/clock/seconds.svg')
+  background-repeat no-repeat
+  background-size 100% 100%  
+
+
+/* HOURS */
+.c-layout.c-hour
+  top 65%
+  margin-top 0
+  text-align center
+  height auto
+
+.c-layout.c-hour .number
+  @extends .montserrat
+  font-size 32px
+
+
+/* DAYS */
+.c-layout.c-hour .metric
+  @extends .montserrat
+  position absolute
+  font-size 16px
+  margin-top 12px
+  text-transform uppercase
+
+.c-layout.c-day
+  text-align center
+  top 50%
+  height auto
+  margin-top -20px
+
+.c-layout.c-day .number
+  @extends .montserrat
+  font-size 40px
+  display block
+
+.c-layout.c-day .metric
+  @extends .montserrat
+  font-size 24px
+  letter-spacing 1px
+  padding-left 2px
+  text-transform uppercase
+  margin-top -12px
+  display block
+
+.clock-layout .clock-zero
+  top 50%
+  left 0
+  position absolute
+  width 100%
+  height 100%
+  margin-top -20px
+  text-align center
+  @extends .montserrat
+  text-transform capitalize

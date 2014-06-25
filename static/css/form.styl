@@ -1,0 +1,117 @@
+.subscribe
+  transition 1s
+  opacity 1
+  transition-delay 2s
+  transform none
+
+.subscribe.start
+  opacity 0
+
+.subscribe-btn
+  border 3px solid #F8F9FA
+  padding-top 10px
+  padding-bottom 10px
+  margin-bottom 1rem
+  margin-top 0rem
+  box-sizing border-box
+  position relative
+  box-shadow inset 0 1px 0 rgba(_white,0.5), 0 2px 2px rgba(_black,0.2), 0 0 4px 1px rgba(_black,0.1)
+  float left
+  display block
+  width 300px
+
+.subscribe-btn p
+  @extends .montserrat
+  text-transform uppercase
+  transition 0.6s
+  font-size 16px
+  opacity 2
+  text-align center
+  position relative
+  width 100%
+  height 100%
+  border none
+  margin 0
+  padding 0
+  transform translateY(0rem) rotateX(0deg)
+  box-sizing border-box
+
+.subscribe-btn:hover p
+  position relative   
+  opacity 0
+  transform translateY(2rem) rotateX(-95deg)
+
+.subscribe-btn.email-sent:hover p
+  transform none
+  opacity 1
+
+.subscribe .form
+  position absolute
+  box-sizing border-box
+  border none
+  margin 0
+  padding 0
+  transition ease-out 0.6s 
+  display block
+  margin-left auto
+  margin-right auto
+  width 100%
+  height 100%
+  text-align center
+  top 0
+  margin-top 0
+
+.subscribe .input-elements
+  border none
+  position absolute
+  display inline-block
+  height 100%
+  width 100%
+  left 0
+  top 0
+  margin-top 0
+
+.subscribe .form.magic,
+.subscribe-btn.email-sent:hover .form.magic    
+  top 0.0rem
+  opacity 0    
+
+.subscribe-btn.email-sent .form.magic
+  visibility hidden
+
+.subscribe-btn:hover .form.magic
+  opacity 1    
+  top 0rem
+  transform rotateX(0deg)
+  transition 0.6s
+
+.subscribe input.email-input,
+.subscribe button.email-btn
+  outline none 
+  box-sizing border-box
+
+.subscribe .email-input
+  background transparent 
+  @extends .montserrat
+  letter-spacing 0.05em
+  padding 10px
+  font-size 16px
+  color #F8F9FA
+  margin 0     
+  border none
+  box-shadow none
+  width 85%
+
+.subscribe .email-btn
+  border none
+  @extends .montserrat
+  letter-spacing 0.05em
+  padding 10px
+  font-size 16px  
+  margin 0
+  background #fff
+  color #2D2E30
+  height 100%
+  box-sizing border-box
+  width 15%
+  float right

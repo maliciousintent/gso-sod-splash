@@ -1,0 +1,174 @@
+//  - nib folder is located in static/css/
+@import('nib');
+
+//  - load webfonts from Google
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+
+//  - font style
+.open-sans
+  font-family 'Open Sans', sans-serif
+.montserrat
+  font-family 'Montserrat', sans-serif
+
+
+//  - colors and other vars
+_black = #000
+_white = #fff
+_padding = 40px
+
+//  - reset purecss fonts
+.pure-g [class *='pure-u'],
+.pure-g-r [class*="pure-u"]
+  @extends .open-sans
+.pure-form
+  input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea
+    @extends .open-sans
+  button
+    @extends .open-sans
+button
+  @extends .open-sans
+
+
+//  - some useful classes
+.tl
+  text-align left
+.tc
+  text-align center
+.tr
+  text-align right
+for _val in (1..15)
+  .spacer-{_val * 10}
+    height (_val * 10px)
+.pl
+  padding-left _padding
+.pr
+  padding-right _padding
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  @extends .montserrat
+  margin 0
+  line-height 100%
+
+
+//  - main style
+html,
+body
+  height 100%
+  @extends .open-sans
+
+body
+  background url('../img/picts/sod_.jpg') center no-repeat fixed
+  background-size cover
+  font-weight 400
+  color _white
+  -webkit-font-smoothing antialiased
+  -webkit-overflow-scrolling touch
+
+  .gradient
+    position fixed
+    z-index 1
+    width 100%
+    height 100%
+    background rgba(_black, 0.45)
+
+  .container
+    position relative
+    z-index 2
+
+  .transition
+    transition all 2s ease
+
+  .fadeIn
+    opacity 0
+    &.show
+      opacity 1  
+
+  header
+    position absolute
+    width 100%
+    top 0
+    left 0
+    z-index 3
+    .c-clock
+      width 400px
+      height 400px
+      margin 0 auto
+      position relative
+      transition-delay 0.5s
+
+  #main
+    position relative
+    z-index 4
+    img
+      &#logo
+        width (625px / 2)
+        height (106px / 2)
+        border-bottom 3px solid rgba(_white, 0.20)
+        padding-bottom 10px
+        margin-bottom 10px
+    h2
+      text-transform uppercase
+      font-weight 700
+      font-size 32px
+    .subscribe
+      clearfix()
+    p
+      &.when
+        @extends .montserrat
+        font-weight 700
+        span
+          &.uppercase
+            text-transform uppercase
+
+  footer
+    h5
+      font-weight 400
+      margin-bottom 10px
+      span
+        border-bottom 2px solid rgba(_white, 0.20)
+    .partners
+      img
+        &.partner
+          width (300px / 2)
+          height (156px / 2)
+          margin-right 10px
+          &:last-child
+            margin-right 0
+    small
+      display block
+      margin 10px 0
+      font-size 12px
+
+//  - for media queries see http://purecss.io/grids/ @ Default Media Queries
+@media screen and (max-width: 48em)
+  body
+    .container
+      & > .spacer-100
+        height 20px
+    header
+      position relative
+      .spacer-100
+        height 0px
+      .c-clock
+        width 250px
+        height 250px
+        margin-bottom 50px
+    #main
+      .spacer-100,
+      .spacer-60
+        height 30px
+    footer
+      .partners
+        margin-bottom 20px
+
+
+//  - import other styles
+@import('clock')
+@import('form')

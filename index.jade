@@ -1,0 +1,113 @@
+doctype html
+html(prefix='og: http://ogp.me/ns#')
+
+  head
+    title Social Organization Day - Coming soon
+
+    meta(charset='utf-8')
+    meta(property='og:title', content='Social Organization Day')
+    meta(property='og:type', content='website')
+    meta(name='author', content='GSO Communication Company & Plastic Panda')
+    meta(name='description', content='Social Organization Day - 20 novembre 2014')
+    meta(name='keywords', content='Social, social, Organization, organization, Day, day, Comunication, comunication, Community, community')
+    //- @TODO meta(property='og:image' content='')
+    meta(property='og:description' content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css')
+    link(rel='stylesheet', href='static/css/style.css')
+
+    <!--[if lt IE 8]>
+    script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+    script.
+      window.html5 || document.write('<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"><\\/script>')
+    <![endif]-->
+
+  body
+    .gradient
+
+    .container
+
+      .spacer-100
+
+      header
+        .pure-g
+          .pure-u-1.pure-u-sm-1.pure-u-md-1-2
+          .pure-u-1.pure-u-sm-1.pure-u-md-1-2
+            .tc
+              .spacer-100
+              .c-clock.transition.fadeIn
+                .clock-layout
+                  .clock-container.clock-countdown
+                    .c-metric.c-layout
+                    .c-minute.c-layout.minutes
+                    .c-second.c-layout.seconds
+                    .c-hour.c-layout
+                      span.number.hours 00
+                      span.metric ore
+                    .c-day.c-layout
+                      span.number.days 000
+                      span.metric giorni
+
+      #main
+        .pure-g
+          .pure-u-1.pure-u-sm-1.pure-u-md-1-3
+            .pl.pr
+
+              img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
+              
+              h2.transition.fadeIn
+                | Dalla comunit&agrave;<br />alle community
+              
+              p.abstract.transition.fadeIn
+                | Cosa accade quando la sfida dei social media non si gioca sull'esterno, sul mercato, ma all'interno dell'organizzazione stessa?
+
+              .spacer-60
+
+              .subscribe.transition.fadeIn
+                .subscribe-btn
+                  p Resta aggiornato!
+                  form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank')
+                    .input-elements
+                      input(type='hidden', name='b_d006ae2613ee762f9e573e14d_8999585e26', tabindex='-1', value='')
+                      input#mce-EMAIL.email-input.required(type='email', name='EMAIL', placeholder='Il tuo indirizzo e-mail', required='required', data-validation-type='email')
+                      button.email-btn(name='submit_email') OK
+
+              .spacer-20
+              
+              p.when.transition.fadeIn
+                span.uppercase
+                  | Milano, 20 novembre 2014
+                br
+                | Palazzo Castiglioni, c.so Venezia 47
+
+
+      footer
+        .spacer-10
+
+        .pure-g
+          .pure-u-1.pure-u-sm-1.pure-u-md-1-2.partners
+            .pl.pr
+              h5
+                span Evento organizzato da
+              img.partner(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
+              img.partner(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
+          .pure-u-1.pure-u-sm-1.pure-u-md-1-2.partners
+            .pl.pr
+              h5
+                span Con il patrocinio di
+              img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
+              img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+
+        .pl.pr
+          small
+            | Hitrea is a member of GSO Company
+
+        .spacer-30
+
+
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(type='text/javascript', src='static/js/vendor/jquery.downCount.js')
+    script(type='text/javascript', src='static/js/main.min.js')
