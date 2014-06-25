@@ -267,6 +267,8 @@ body {
     -moz-transform: none;
     -ms-transform: none;
     transform: none;
+    
+    width: 100%;
 }
 .header-top.start{
     opacity: 0;
@@ -277,9 +279,10 @@ body {
     transform: translateY(-3rem);
 }
     .header-top .follow-text{
-        font-size: 1.5rem;   
+        font-size:1.5rem;   
         font-family: 'OpenSans-Light';     
         margin: 0;
+        text-align: center;
     }
     .header-top .follow-text .fa-twitter {
         font-size: 2rem;
@@ -1597,18 +1600,52 @@ h2.title {
     -ms-transform: none;
     transform: none;
     opacity: 1;
-    margin: 5rem 0;
+    margin: 0 0;
 
     text-align: center;
+    width: 100%;
+    
+    display:block;
 }
 .partners.start {
     opacity: 0;
 }
 
-
-
 @media screen and (max-width: 360px) {
     .c-clock {
         height: 40rem;
     }
+}
+
+
+.partners-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 70px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.partners-bottom img {
+    padding: 0 10px 0 0;
+    height: 50px;
+    width: auto;
+}
+
+.partners-bottom-collab {
+    float:left;
+    clear:none;
+    text-align: left;
+}
+
+.partners-bottom-collab img:first-child() {
+    padding-left: -40px;
+}
+
+.partners-bottom-org {
+    float:left;
+    clear:none;   
+    text-align: left;
+    margin-right: 70px;
 }
