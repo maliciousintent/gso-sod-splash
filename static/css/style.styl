@@ -82,28 +82,18 @@ body
   .container
     position relative
     z-index 2
+    width 1280px
+    margin auto
 
   .transition
-    transition all 2s ease
+    transition opacity 2s ease
+  .transition2
+    transition opacity 2s ease 0.5s
 
   .fadeIn
     opacity 0
     &.show
-      opacity 1  
-
-  header
-    position absolute
-    width 100%
-    top 0
-    left 0
-    z-index 3
-    .c-clock
-      width 400px
-      height 400px
-      overflow hidden
-      margin 0 auto
-      position relative
-      transition-delay 0.5s
+      opacity 1
 
   #main
     position relative
@@ -118,13 +108,16 @@ body
           font-size 18px
           line-height 28px
           margin-right 10px
+          transition color 0.5s
+          &:hover
+            color lighten(_green, 40%)
     img
       &#logo
         width (625px / 2)
         height (106px / 2)
-        border-bottom 3px solid rgba(_white, 0.20)
-        padding-bottom 10px
-        margin-bottom 10px
+        border-bottom 2px solid rgba(_white, 0.20)
+        padding-bottom 20px
+        margin-bottom 20px
     h2
       text-transform uppercase
       font-weight 700
@@ -138,11 +131,18 @@ body
         span
           &.uppercase
             text-transform uppercase
+        small
+          font-weight 400
+
+    .abstract
+      width 340px
+      max-width 100%
 
   footer
     h5
       font-weight 400
       margin-bottom 20px
+      opacity 0.5
       span
         border-bottom 2px solid rgba(_white, 0.20)
     #partners
@@ -152,18 +152,21 @@ body
         vertical-align top
         img
           &.partner
-            width (300px / 2)
+            width auto
             height (156px / 2)
-            margin-right 10px
-            &:last-child
-              margin-right 0
+            margin-right 30px
     small
       display block
       margin 10px 0
       font-size 12px
       opacity 0.7
 
+
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
+@media screen and (max-width: 1300px)
+  body
+    .container
+      width 960px
 @media screen and (max-width: 48em)
   _padding = 10px
   .pl
@@ -172,17 +175,18 @@ body
     padding-right _padding
   body
     .container
+      width auto
+      max-width 100%
       & > .spacer-60
         height 20px
     header
       position relative
       .spacer-100
         height 0px
-      .c-clock
-        width 250px
-        height 250px
-        margin-bottom 50px
     #main
+      text-align center
+      .abstract
+        margin auto
       .spacer-100,
       .spacer-60
         height 30px
@@ -195,6 +199,9 @@ body
             font-size 16px
             &:last-child
               margin-right 0
+            transition color 0.5s
+            &:hover
+              color _green
       img
         &#logo
           max-width 100%!important
@@ -202,8 +209,12 @@ body
       .subscribe
         .subscribe-btn
           width 97%
+          max-width 450px
+          display block
           margin 0 auto
     footer
+      #partners
+        text-align left
       .partners
         margin-bottom 20px
 

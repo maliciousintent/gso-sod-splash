@@ -1,10 +1,21 @@
+.c-clock
+  width 400px
+  height 400px
+  overflow hidden
+  margin 0 auto
+  position relative
+  transition opacity 2s ease 1s !important
+  opacity 0
+  &.show
+    opacity 1
+
 .c-layout
   width 100%
   height 100%
   position absolute
   top 0
   left 0
-  transition all 5s ease
+  transition all 1s
 
 .c-layout.c-metric
   background url('../img/clock/metrics.svg')
@@ -37,10 +48,10 @@
 /* DAYS */
 .c-hour .metric
   @extends .montserrat
-  position absolute
   font-size 16px
-  margin-top 12px
+  margin-top -6px
   text-transform uppercase
+  display block
 
 .c-day
   text-align center
@@ -57,7 +68,8 @@
   letter-spacing 1px
   padding-left 2px
   text-transform uppercase
-  margin-top -12px
+  margin-top -20px
+  margin-bottom 10px
   display block
 
 .clock-layout .clock-zero
@@ -82,5 +94,10 @@
   transform translate(-50%, -50%)
 
 @media screen and (max-width: 48em)
-  .c-day .number
-    font-size 60px
+  .c-clock
+    width 250px
+    height 250px
+    margin-bottom 50px
+    .c-day .number
+      font-size 60px
+      margin-bottom 3px

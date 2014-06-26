@@ -17,6 +17,7 @@ html(prefix='og: http://ogp.me/ns#')
 
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css')
+    link(rel='shortcut icon', href='static/img/favicon.png', type='image/png')
     link(rel='stylesheet', href='static/css/style.css')
 
     <!--[if lt IE 8]>
@@ -32,35 +33,16 @@ html(prefix='og: http://ogp.me/ns#')
 
       .spacer-60
 
-      header
-        .pure-g
-          .pure-u-1.pure-u-sm-1.pure-u-md-1-2
-          .pure-u-1.pure-u-sm-1.pure-u-md-1-2
-            .tc
-              .spacer-100
-              .c-clock.transition.fadeIn
-                .clock-layout
-                  .clock-container.clock-countdown
-                    .c-metric.c-layout
-                    .c-minute.c-layout.minutes
-                    .c-second.c-layout.seconds
-                    .c-fixed
-                      .c-day
-                        span.number.days 000
-                        span.metric giorni
-                      .c-hour
-                        span.number.hours 00
-                        span.metric ore
-
       #main
         .pure-g
-          .pure-u-1.pure-u-sm-1.pure-u-md-1-3
+          .pure-u-1.pure-u-md-1-2
             .pl.pr
-
+              .spacer-40
               h5#hashtags.transition.fadeIn
                 span #SOday14 
                 span #SocialOrg 
                 span #SocialHR
+              .spacer-10
 
               img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
 
@@ -68,11 +50,11 @@ html(prefix='og: http://ogp.me/ns#')
                 | Dalla comunit&agrave;<br />alle community
               
               p.abstract.transition.fadeIn
-                | Cosa accade quando la sfida dei social media non si gioca sull'esterno, sul mercato, ma all'interno dell'organizzazione stessa?
+                | Cosa accade quando la sfida dei social media si gioca all'interno dell'organizzazione?
 
               .spacer-60
 
-              .subscribe.transition.fadeIn
+              .subscribe.transition2.fadeIn
                 .subscribe-btn
                   p Resta aggiornato!
                   form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank')
@@ -83,38 +65,51 @@ html(prefix='og: http://ogp.me/ns#')
 
               .spacer-10
               
-              p.when.transition.fadeIn
+              p.when.transition2.fadeIn
                 span.uppercase
                   | Milano, 20 novembre 2014
                 br
                 small Palazzo Castiglioni, c.so Venezia 47
 
+          .pure-u-1.pure-u-md-1-2
 
-      footer
-        .spacer-30
+            .spacer-100
+            .c-clock.transition.fadeIn
+              .clock-layout
+                .clock-container.clock-countdown
+                  .c-metric.c-layout
+                  .c-minute.c-layout.minutes
+                  .c-second.c-layout.seconds
+                  .c-fixed
+                    .c-day
+                      span.number.days &nbsp;
+                      span.metric giorni
+                    .c-hour
+                      span.number.hours &nbsp;
+                      span.metric ore
 
-        #partners.tc
-          .partners
+          .pure-u-1
+            .spacer-80
             .pl.pr
-              .tc
-                h5
-                  span Evento organizzato da
-                img.partner(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
-                img.partner(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
-                small
-                  | Hitrea is a member of GSO Company
-          .partners
-            .pl.pr
-              .tc
-                h5
-                  span Con il patrocinio di
-                img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
-          .partners
-            .pl.pr
-              .tc
-                h5
-                  span Con la partecipazione di
-                img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+              footer.transition.fadeIn
+                #partners
+                  .partners
+                    .tl
+                      h5
+                        span Evento organizzato da
+                      img.partner(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
+                      img.partner(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
+                  .partners
+                    .tl
+                      h5
+                        span Con il patrocinio di
+                      img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
+                  .partners
+                    .tl
+                      h5
+                        span Con la partecipazione di
+                      img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+
 
         .spacer-20
 
