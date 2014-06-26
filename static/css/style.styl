@@ -2,7 +2,7 @@
 @import('nib');
 
 //  - load webfonts from Google
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
 
 //  - font style
@@ -108,6 +108,16 @@ body
   #main
     position relative
     z-index 4
+    h5
+      &#hashtags
+        font-weight 300
+        @extends .montserrat
+        margin-bottom 50px
+        span
+          display inline-block
+          font-size 18px
+          line-height 28px
+          margin-right 10px
     img
       &#logo
         width (625px / 2)
@@ -132,21 +142,26 @@ body
   footer
     h5
       font-weight 400
-      margin-bottom 10px
+      margin-bottom 20px
       span
         border-bottom 2px solid rgba(_white, 0.20)
-    .partners
-      img
-        &.partner
-          width (300px / 2)
-          height (156px / 2)
-          margin-right 10px
-          &:last-child
-            margin-right 0
+    #partners
+      clearfix()
+      .partners
+        display inline-block
+        vertical-align top
+        img
+          &.partner
+            width (300px / 2)
+            height (156px / 2)
+            margin-right 10px
+            &:last-child
+              margin-right 0
     small
       display block
       margin 10px 0
       font-size 12px
+      opacity 0.7
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
 @media screen and (max-width: 48em)
@@ -157,7 +172,7 @@ body
     padding-right _padding
   body
     .container
-      & > .spacer-100
+      & > .spacer-60
         height 20px
     header
       position relative
@@ -171,6 +186,23 @@ body
       .spacer-100,
       .spacer-60
         height 30px
+      h5
+        &#hashtags
+          text-align center
+          span
+            line-height 20px
+            margin-right 5px
+            font-size 16px
+            &:last-child
+              margin-right 0
+      img
+        &#logo
+          max-width 100%!important
+          height auto!important
+      .subscribe
+        .subscribe-btn
+          width 97%
+          margin 0 auto
     footer
       .partners
         margin-bottom 20px
