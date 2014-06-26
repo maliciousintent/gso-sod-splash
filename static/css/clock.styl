@@ -11,13 +11,11 @@
   background-repeat no-repeat
   background-size 100% 100%
 
-
 /* MINUTES */
 .c-layout.c-minute
   background url('../img/clock/minutes.svg')
   background-repeat no-repeat
   background-size 100% 100%
-
 
 /* SECONDS */
 .c-layout.c-second
@@ -25,39 +23,35 @@
   background-repeat no-repeat
   background-size 100% 100%  
 
-
 /* HOURS */
-.c-layout.c-hour
+.c-hour
   top 65%
   margin-top 0
   text-align center
   height auto
 
-.c-layout.c-hour .number
+.c-hour .number
   @extends .montserrat
   font-size 32px
 
-
 /* DAYS */
-.c-layout.c-hour .metric
+.c-hour .metric
   @extends .montserrat
   position absolute
   font-size 16px
   margin-top 12px
   text-transform uppercase
 
-.c-layout.c-day
+.c-day
   text-align center
-  top 50%
   height auto
-  margin-top -20px
 
-.c-layout.c-day .number
+.c-day .number
   @extends .montserrat
-  font-size 40px
+  font-size 120px
   display block
 
-.c-layout.c-day .metric
+.c-day .metric
   @extends .montserrat
   font-size 24px
   letter-spacing 1px
@@ -76,3 +70,17 @@
   text-align center
   @extends .montserrat
   text-transform capitalize
+
+
+
+//  - PANDA
+
+.c-fixed
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+@media screen and (max-width: 48em)
+  .c-day .number
+    font-size 60px
