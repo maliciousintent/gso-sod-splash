@@ -99,6 +99,7 @@ body
     .c-clock
       width 400px
       height 400px
+      overflow hidden
       margin 0 auto
       position relative
       transition-delay 0.5s
@@ -148,6 +149,11 @@ body
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
 @media screen and (max-width: 48em)
+  _padding = 10px
+  .pl
+    padding-left _padding
+  .pr
+    padding-right _padding
   body
     .container
       & > .spacer-100
