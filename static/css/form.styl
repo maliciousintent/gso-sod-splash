@@ -9,8 +9,6 @@
 
 .subscribe-btn
   border 3px solid #F8F9FA
-  padding-top 10px
-  padding-bottom 10px
   margin-bottom 1rem
   margin-top 0rem
   box-sizing border-box
@@ -18,7 +16,14 @@
   box-shadow inset 0 1px 0 rgba(_white,0.5), 0 2px 2px rgba(_black,0.2), 0 0 4px 1px rgba(_black,0.1)
   float left
   display block
-  width 300px
+  width 315px
+
+  background _green
+  border-color _green
+  border none
+  box-shadow none
+  border-radius 50px
+  overflow hidden
 
 .subscribe-btn p
   @extends .montserrat
@@ -35,6 +40,8 @@
   padding 0
   transform translateY(0rem) rotateX(0deg)
   box-sizing border-box
+
+  padding 15px 0
 
 .subscribe-btn:hover p
   position relative   
@@ -71,6 +78,8 @@
   top 0
   margin-top 0
 
+  background _white
+
 .subscribe .form.magic,
 .subscribe-btn.email-sent:hover .form.magic    
   top 0.0rem
@@ -94,24 +103,32 @@
   background transparent 
   @extends .montserrat
   letter-spacing 0.05em
-  padding 10px
+  padding 15px
   font-size 16px
-  color #F8F9FA
+  font-weight 400
+  color _black
   margin 0     
   border none
   box-shadow none
-  width 85%
+  width 80%
 
 .subscribe .email-btn
   border none
   @extends .montserrat
   letter-spacing 0.05em
-  padding 10px
+  padding 15px
   font-size 16px  
   margin 0
   background #fff
   color #2D2E30
   height 100%
   box-sizing border-box
-  width 15%
+  width 20%
   float right
+
+  background _green
+  color _white
+  transition background 0.5s ease
+
+  &:hover
+    background lighten(_green, 20%)
