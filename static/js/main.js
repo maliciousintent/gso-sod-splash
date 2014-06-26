@@ -8,7 +8,7 @@ $(function () {
 
   //  -- clock --
   $('.clock-countdown').downCount({
-    date: '11/20/2014 12:00:00',
+    date: '11/20/2014 11:00:00',
     offset: +1
   }, function () {
     var zerodayText = 'Ci siamo!';  
