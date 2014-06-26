@@ -44,6 +44,23 @@ html(prefix='og: http://ogp.me/ns#')
                 span #SocialHR
               .spacer-10
 
+
+
+          .pure-u-1.pure-u-md-1-2
+            .pl.pr
+              .partners-fix.transition.fadeIn
+                .partners-container.tc
+                  .partners
+                    .tc
+                      //-h5
+                        span Evento organizzato da
+                      img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
+                      img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
+
+
+          .pure-u-1.pure-u-md-1-2
+            .pl.pr
+
               img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
 
               h2.transition.fadeIn
@@ -68,12 +85,14 @@ html(prefix='og: http://ogp.me/ns#')
               p.when.transition2.fadeIn
                 span.uppercase
                   | Milano, 20 novembre 2014
-                br
-                small Palazzo Castiglioni, c.so Venezia 47
+                //-
+                  br
+                  small Palazzo Castiglioni, c.so Venezia 47
 
           .pure-u-1.pure-u-md-1-2
 
-            .spacer-100
+            .spacer-20
+
             .c-clock.transition.fadeIn
               .clock-layout
                 .clock-container.clock-countdown
@@ -92,8 +111,8 @@ html(prefix='og: http://ogp.me/ns#')
             .spacer-80
             .pl.pr
               footer.transition.fadeIn
-                #partners
-                  .partners
+                .partners-container
+                  //-.partners
                     .tl
                       h5
                         span Evento organizzato da
@@ -109,6 +128,10 @@ html(prefix='og: http://ogp.me/ns#')
                       h5
                         span Con la partecipazione di
                       img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+                  .partners.panda
+                    .tr
+                      .spacer-60
+                      img.partner(src='static/img/partners/partner-plasticpanda.png', alt='Plastic Panda snc')
 
 
         .spacer-20

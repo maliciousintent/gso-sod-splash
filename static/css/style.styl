@@ -71,6 +71,9 @@ body
   color _white
   -webkit-font-smoothing antialiased
   -webkit-overflow-scrolling touch
+  &.old
+    background url('../img/picts/sod_.jpg') center no-repeat fixed
+    background-size cover
 
   .gradient
     position fixed
@@ -138,14 +141,16 @@ body
       width 340px
       max-width 100%
 
-  footer
+  footer,
+  .partners-fix
+    clearfix()
     h5
       font-weight 400
       margin-bottom 20px
       opacity 0.5
       span
         border-bottom 2px solid rgba(_white, 0.20)
-    #partners
+    .partners-container
       clearfix()
       .partners
         display inline-block
@@ -153,13 +158,34 @@ body
         img
           &.partner
             width auto
-            height (156px / 2)
+            height (156px / 2.5)
             margin-right 30px
+        &.panda
+          float right
+          img
+            margin-right 0px
+            width auto
+            height 15px
+            opacity 0.1
     small
       display block
       margin 10px 0
       font-size 12px
       opacity 0.7
+
+  .partners-fix
+    width 400
+    margin auto
+    .partners
+      img
+        vertical-align middle!important
+        display inline-block!important
+        height (156px / 2)!important
+        &.partner.no-margin
+          margin-right 0
+        &.partner-bigger
+          width auto
+          height (156px / 1.5)!important
 
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
@@ -195,6 +221,7 @@ body
       h5
         &#hashtags
           text-align center
+          margin-bottom 10px
           span
             line-height 20px
             margin-right 5px
@@ -211,15 +238,36 @@ body
       .subscribe
         text-align center
         .subscribe-btn
-          width 97%
-          max-width 450px
+          width 100%
           display block
           margin 0 auto
-    footer
-      #partners
-        text-align left
+    footer,
+    .partners-fix
+      .partners-container
+        text-align center!important
+        .partners
+          margin-bottom 20px
+          display block
+          .tl,
+          .tr
+            text-align center
+            img
+              margin 0
+          &.panda
+            float none
+            img
+              opacity 0.2
+              height 15px
+
+    .partners-fix
       .partners
-        margin-bottom 20px
+        .tr
+          text-align center!important
+        img
+          display block!important
+          margin 0 auto!important
+          &:last-child
+            margin-bottom 20px!important
 
 
 //  - import other styles
