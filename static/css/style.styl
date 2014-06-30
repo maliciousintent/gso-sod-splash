@@ -65,15 +65,12 @@ body
   @extends .open-sans
 
 body
-  background url('../img/picts/sod___.jpg') center no-repeat fixed
+  background url('../img/picts/sod_.jpg') center no-repeat fixed
   background-size cover
   font-weight 400
   color _white
   -webkit-font-smoothing antialiased
   -webkit-overflow-scrolling touch
-  &.old
-    background url('../img/picts/sod_.jpg') center no-repeat fixed
-    background-size cover
 
   .gradient
     position fixed
@@ -116,8 +113,9 @@ body
             color lighten(_green, 40%)
     img
       &#logo
-        width (625px / 2)
-        height (106px / 2)
+        width (625px / 1.5)
+        //-height (106px / 1.5)
+        height auto
         border-bottom 2px solid rgba(_white, 0.20)
         padding-bottom 20px
         margin-bottom 20px
@@ -131,7 +129,7 @@ body
       &.when
         @extends .montserrat
         font-weight 400
-        font-size 13px
+        font-size 15px
         span
           &.uppercase
             text-transform uppercase
@@ -139,8 +137,9 @@ body
           font-weight 400
 
     .abstract
-      width 340px
-      max-width 100%
+      //-width 340px
+      //-max-width 100%
+      font-size 20px
 
   footer,
   .partners-fix
