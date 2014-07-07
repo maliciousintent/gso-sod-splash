@@ -115,14 +115,18 @@ body
         font-weight 300
         @extends .montserrat
         margin-bottom 50px
+        a
+          color _white
+          text-decoration none
+          transition color 0.5s
         span
           display inline-block
           font-size 18px
           line-height 28px
           margin-right 10px
-          transition color 0.5s
           &:hover
-            color lighten(_green, 40%)
+            a
+              color lighten(_green, 40%)
     img
       &#logo
         width (625px / 1.5)
