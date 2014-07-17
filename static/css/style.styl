@@ -113,6 +113,42 @@ body
       vertical-align middle
       width 220px
 
+  #menu
+    position fixed
+    top 10px
+    left 10px
+    z-index 3
+    ul
+      margin 0
+      padding 0
+      li
+        list-style-type none
+        margin-bottom 20px
+        cursor pointer
+        overflow hidden
+        position relative
+        &:last-child
+          margin-bottom 0px
+        i,
+        span
+          display inline-block
+          vertical-align middle
+        i
+          font-size 24px
+          color _green
+        span
+          transition margin-left 1s ease
+          margin-left -500px
+          padding 2px 5px
+          background rgba(_black, 0.5)
+          border-radius 5px
+          font-size 12px
+          @extends .montserrat
+        &:hover
+          span
+            margin-left 10px
+            transition margin-left 1s ease
+
   #main
     position relative
     z-index 4
@@ -121,6 +157,11 @@ body
         font-weight 300
         @extends .montserrat
         margin-bottom 50px
+        .twitter-icon
+          font-size 24px
+          display inline-block
+          margin-right 10px
+          font-weight normal
         a
           color _white
           text-decoration none
@@ -217,9 +258,22 @@ body
     clearfix()
     .fix-box
       float left
+      margin-right 10px
 
 
 
+  #countdown
+    transition opacity 1s ease 0.5s !important
+    opacity 0
+    &.show
+      opacity 1
+    h4
+      @extends .montserrat
+      font-size 24px
+    & > span
+      font-size 32px
+      @extends .open-sans
+      font-weight 300
 
 
 
@@ -227,17 +281,72 @@ body
   #programma
     h1
       @extends .montserrat
+      margin-bottom 10px
+      border-bottom 2px solid rgba(_white, 0.5)
+      display inline-block
+      padding-bottom 2px
     #agenda
       .row
+        .border
+          border-right 5px solid rgba(_white, 0)
+          margin-right 20px
+          &.border-yellow
+            border-color rgba(_yellowH, 0.75)
+          &.border-orange
+            border-color rgba(_orangeH, 0.75)
+          &.border-green
+            border-color rgba(_greenH, 0.75)
+          &.border-azure
+            border-color rgba(_azureH, 0.75)
         .text
+          h2,
+          h3,
+          h4,
+          p,
+          ul
+            margin 0
+            padding 0
           p,
           ul li
             font-size 15px
           ul
-            padding 0
-            margin 0
             li
               list-style-type none
+
+  #relatori
+    #speakers-thumbs
+      _picSize = 100px
+      span.pic
+        display inline-block
+        width _picSize
+        height _picSize
+        border-radius (_picSize / 2)
+        overflow hidden
+        margin 0 10px 10px 0
+        cursor pointer
+        img
+          transition opacity 0.5s ease
+          opacity 0.5
+          width 100%
+          height auto
+          border-radius 50%
+        &.active
+          img
+            opacity 1
+      
+    #speakers-bios
+      .swipe
+        overflow hidden
+        visibility hidden
+        position relative
+        .swipe-wrap
+          overflow hidden
+          position relative
+          & > div
+            float left
+            width 100%
+            position relative
+        
 
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
@@ -336,5 +445,4 @@ body
 
 
 //  - import other styles
-//- @import('clock')
 @import('form')

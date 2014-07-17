@@ -18,6 +18,7 @@ html(prefix='og: http://ogp.me/ns#')
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css')
     link(rel='shortcut icon', href='static/img/favicon.png', type='image/png')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='static/css/style.css?v=2')
 
     <!--[if lt IE 8]>
@@ -29,7 +30,21 @@ html(prefix='og: http://ogp.me/ns#')
   body
     .gradient
 
+    #menu
+      ul
+        li(data-click='programma')
+          i.fa.fa-file-text-o
+          span Programma
+        li(data-click='relatori')
+          i.fa.fa-users
+          span Relatori
+        li(data-click='iscriviti')
+          i.fa.fa-send-o
+          span Iscriviti
+
     .container
+
+
 
       .spacer-20
 
@@ -39,15 +54,21 @@ html(prefix='og: http://ogp.me/ns#')
 
       .spacer-150
 
+
       #programma
 
         block programma
+
+
+      .spacer-150
 
 
       #relatori
 
         block relatori
 
+
+      .spacer-20
 
 
     |<script type='text/javascript'>
@@ -61,5 +82,6 @@ html(prefix='og: http://ogp.me/ns#')
 
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     //-script(type='text/javascript', src='static/js/vendor/jquery.downCount.js')
-    script(type='text/javascript', src='static/js/vendor/humanize-duration-custom.js')
+    //-script(type='text/javascript', src='static/js/vendor/humanize-duration-custom.js')
+    script(type='text/javascript', src='static/js/vendor/swipe.js')
     script(type='text/javascript', src='static/js/main.min.js')

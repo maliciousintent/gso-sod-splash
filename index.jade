@@ -6,6 +6,7 @@ block main
       .pl.pr
         .spacer-40
         h5#hashtags.transition.fadeIn
+          i.fa.fa-twitter.twitter-icon
           span 
             a(href='http://twitter.com/hashtag/SOday14?f=realtime', target='_blank') #SOday14 
           span
@@ -17,6 +18,7 @@ block main
 
 
     .pure-u-1.pure-u-md-1-2
+      .spacer-10
       .pl.pr
         .partners-fix.transition.fadeIn
           .partners-container.tc
@@ -70,26 +72,12 @@ block main
 
     .pure-u-1.pure-u-md-1-2
 
+      //-
+        #countdown.fadeIn.tc
+          h4 Mancano
+          span &nbsp;
       .spacer-10
 
-      #countdown.fadeIn
-
-      //-
-        .c-clock.transition.fadeIn
-          .clock-layout
-            .clock-container.clock-countdown
-              .c-metric.c-layout
-              .c-minute.c-layout.minutes
-              .c-second.c-layout.seconds
-              .c-fixed
-                .c-day
-                  span.number.days &nbsp;
-                  span.metric giorni
-                .c-hour
-                  span.number.hours &nbsp;
-                  span.metric ore
-
-      .spacer-80
       .pl.pr
         footer.transition.fadeIn
           .partners-container.tc
@@ -123,7 +111,7 @@ block programma
           .row.pure-g
             .pure-u-1.pure-u-md-1-2
               .text
-                .padding
+                .padding.border.border-yellow
                   h4 9.30 - 11.30
                   h2 Tavola rotonda
                   h3 Dalla comunità alla community
@@ -143,8 +131,8 @@ block programma
           .row.pure-g
             .pure-u-1.pure-u-md-1-2
               .text
-                .padding
-                  h4 11.45 - 12
+                .padding.border.border-orange
+                  h4 11.45 - 12.00
                     br
                     | 12.25 - 12.45
                   h2 Smart Speech
@@ -155,26 +143,95 @@ block programma
                   ul
                     li SALA 1: A. Donadio, Community Enabling
                     li SALA 2: C. Colombo, Social Portal
-                    li SALA 3: A.Galardi, Social Engagement
+                    li SALA 3: A. Galardi, Social Engagement
 
           .spacer-50
 
           .row.pure-g
             .pure-u-1.pure-u-md-1-2
               .text
-                .padding
-                  h4 9.30 - 11.30
-                  h2 Tavola rotonda
-                  h3 Dalla comunità alla community
+                .padding.border.border-orange
+                  h4 12.05 - 12.20
+                    br
+                    | 12.45 - 13.00
+                  h2 Smarth Speech
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding
                   h4 Relatori
                   ul
-                    li Luca Solari – Hitrea
-                    li Elisabetta Caldera – ipotesi: DHR Vodafone
-                    li Nicola Palmarini - Marketing Arepo Bp
-                    li Paolo Zanenga - TWG Consulting
-                    li Piermarco Aroldi – Dir. OssCom
+                    li SALA1: V. Marini, Social Recruiting e Employer branding
+                    li SALA2: R. Pezza, Social Learning
+
+          .spacer-50
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding.border.border-green
+                  h4 13.30 - 14.30
+                  h2 Lunch
+
+          .spacer-50
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding.border.border-azure
+                  h4 14.30 - 16.30
+                  h2 Workshop
+                  h4 Un coordinatore + 3 aziende
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 Relatori
+                  ul
+                    li SALA 1: La governance del cambiamento
+                    li SALA 2: L’Agile Management
+                    li SALA 3: Le organizzazioni sono community
+
+          .spacer-50
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding.border.border-green
+                  h4 17.00
+                  h2 Conclusione
+
+
 
   .spacer-100
+
+
+block relatori
+  .pure-g
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+        h1 Relatori
+
+        #speakers-thumbs
+          span.pic.active
+            img(src='http://lorempixel.com/100/100/people/', data-speaker-id='0')
+          span.pic
+            img(src='http://lorempixel.com/100/100/people/', data-speaker-id='1')
+
+
+    .pure-u-1.pure-u-md-1-2#speakers-bios
+
+      #speakers.swipe
+        .swipe-wrap
+
+          .slide(data-slide-id='0')
+            h2 Luca Solari
+            .text
+              :markdown
+                E' professore ordinario di Organizzazione e Gestione delle Risorse Umane all’Università degli Studi di Milano e docente del MBA del MIP-Politecnico. Ha conseguito il dottorato di ricerca in economia aziendale presso l’Università Luigi Bocconi di Milano. Ha un’esperienza significativa nella progettazione ed erogazione di programmi di cambiamento per Executive, con attività di coaching, formazione e consulenza basata sulla ricerca. Riveste oggi il ruolo di Corporate Sensemaker, Blogger e Social Media experimenter interessato al futuro delle organizzazioni. Nel 2013 è stato il primo e unico italiano a essere invitato come Keynote speaker alla Global Conference di HRPS a Denver, Colorado. È Academic in Residence per Executive Network. All'Academy of Management Conference di Philadelphia dell'agosto del 2014 un suo paper riceverà il Best Paper Award della HR Division.
+
+          .slide(Data-slide-id='1')
+            h2 Piermarco Aroldi
+            .text
+              :markdown
+                Professore Associato presso la Facoltà di Scienze della Formazione di Milano e Piacenza, dove insegna "Sociologia dei processi culturali e comunicativi", "Media e culture dell'infanzia" e "Teorie e tecniche dei nuovi media".  
+                Dopo la laurea in Lettere moderne e il Diploma di specializzazione in Scienze della comunicazione ha conseguito il Dottorato di ricerca in Sociologia e metodologia della ricerca sociale; si occupa di sociologia della comunicazione e della cultura, con particolare attenzione all'ambito dei media; i suoi interessi scientifici si collocano nell'area degli studi sull'audience e l'esperienza mediale, soprattutto televisiva e online, sul rapporto media-minori e sulla media literacy. E' membro italiano dei network "Eu Kids Online" (http://www.eukidsonline.net) e "Net Children Go Mobile" (http://www.netchildrengomobile.eu/), e della Cost Action IS096 "Transforming Audiences, Transforming Societies" (http://www.cost-transforming-audiences.eu/); fa inoltre parte del Comitato di redazione della rivista Comunicazioni Sociali.  
+                Dal 2013 dirige  OssCom, Centro di ricerca sui media e la comunicazione dell'Università Cattolica.
