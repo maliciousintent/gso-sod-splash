@@ -72,19 +72,22 @@ block main
 
       .spacer-10
 
-      .c-clock.transition.fadeIn
-        .clock-layout
-          .clock-container.clock-countdown
-            .c-metric.c-layout
-            .c-minute.c-layout.minutes
-            .c-second.c-layout.seconds
-            .c-fixed
-              .c-day
-                span.number.days &nbsp;
-                span.metric giorni
-              .c-hour
-                span.number.hours &nbsp;
-                span.metric ore
+      #countdown.fadeIn
+
+      //-
+        .c-clock.transition.fadeIn
+          .clock-layout
+            .clock-container.clock-countdown
+              .c-metric.c-layout
+              .c-minute.c-layout.minutes
+              .c-second.c-layout.seconds
+              .c-fixed
+                .c-day
+                  span.number.days &nbsp;
+                  span.metric giorni
+                .c-hour
+                  span.number.hours &nbsp;
+                  span.metric ore
 
       .spacer-80
       .pl.pr
@@ -100,3 +103,78 @@ block main
                 h5
                   span Con la partecipazione di
                 img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+
+
+
+
+
+block programma
+  .pure-g
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+        h1 Programma
+        p
+          b Attenzione! Il programma è provvisorio e sensibile a cambiamenti!
+
+        .spacer-50
+
+        #agenda
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 9.30 - 11.30
+                  h2 Tavola rotonda
+                  h3 Dalla comunità alla community
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 Relatori
+                  ul
+                    li Luca Solari – Hitrea
+                    li Elisabetta Caldera – ipotesi: DHR Vodafone
+                    li Nicola Palmarini - Marketing Arepo Bp
+                    li Paolo Zanenga - TWG Consulting
+                    li Piermarco Aroldi – Dir. OssCom
+
+          .spacer-50
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 11.45 - 12
+                    br
+                    | 12.25 - 12.45
+                  h2 Smart Speech
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 Relatori
+                  ul
+                    li SALA 1: A. Donadio, Community Enabling
+                    li SALA 2: C. Colombo, Social Portal
+                    li SALA 3: A.Galardi, Social Engagement
+
+          .spacer-50
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 9.30 - 11.30
+                  h2 Tavola rotonda
+                  h3 Dalla comunità alla community
+            .pure-u-1.pure-u-md-1-2
+              .text
+                .padding
+                  h4 Relatori
+                  ul
+                    li Luca Solari – Hitrea
+                    li Elisabetta Caldera – ipotesi: DHR Vodafone
+                    li Nicola Palmarini - Marketing Arepo Bp
+                    li Paolo Zanenga - TWG Consulting
+                    li Piermarco Aroldi – Dir. OssCom
+
+  .spacer-100

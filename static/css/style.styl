@@ -16,7 +16,13 @@
 _black = #000
 _white = #fff
 _green = #29b473
+_yellowH = #fdc14f
+_orangeH = #f67036
+_greenH = #32b650
+_azureH = #79d8d9
+
 _padding = 40px
+
 
 //  - reset purecss fonts
 .pure-g [class *='pure-u'],
@@ -213,6 +219,27 @@ body
       float left
 
 
+
+
+
+
+
+  #programma
+    h1
+      @extends .montserrat
+    #agenda
+      .row
+        .text
+          p,
+          ul li
+            font-size 15px
+          ul
+            padding 0
+            margin 0
+            li
+              list-style-type none
+
+
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
 
 @media screen and (max-width: 1300px)
@@ -309,5 +336,5 @@ body
 
 
 //  - import other styles
-@import('clock')
+//- @import('clock')
 @import('form')
