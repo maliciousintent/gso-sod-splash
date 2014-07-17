@@ -21,7 +21,7 @@ _orangeH = #f67036
 _greenH = #32b650
 _azureH = #79d8d9
 
-_padding = 40px
+_padding = 50px
 
 
 //  - reset purecss fonts
@@ -84,6 +84,9 @@ body
     width 100%
     height 100%
     background rgba(_black, 0.45)
+    transition background 0.5s ease
+    &.with-text
+      background rgba(_black, 0.75)
 
   .container
     position relative
@@ -135,12 +138,11 @@ body
           vertical-align middle
         i
           font-size 24px
-          color _green
         span
           transition margin-left 1s ease
           margin-left -500px
           padding 2px 5px
-          background rgba(_black, 0.5)
+          background rgba(_green, 0.8)
           border-radius 5px
           font-size 12px
           @extends .montserrat
@@ -315,7 +317,7 @@ body
 
   #relatori
     #speakers-thumbs
-      _picSize = 100px
+      _picSize = 75px
       span.pic
         display inline-block
         width _picSize
@@ -346,6 +348,15 @@ body
             float left
             width 100%
             position relative
+
+    #speakers
+      .slide
+        font-size 14px
+        color _white
+        a
+          color _white
+          border-bottom 2px solid rgba(_white, 0.5)
+          text-decoration none
         
 
 
@@ -363,6 +374,25 @@ body
   .pr
     padding-right _padding
   body
+    
+    #menu
+      top 0px
+      left 0px
+      z-index 100
+      width 100%
+      background rgba(_white, 0.9)
+      height 40px
+      text-align center
+      ul
+        li
+          display inline-block
+          margin 5px 10px
+          i
+            color _black
+          span
+            display none
+            transition none
+
     .share-container
       width 100%!important
       margin 0 auto 50px auto

@@ -68,4 +68,31 @@ $(function () {
 
 
 
+  //  -- check scroll position --
+  window.addEventListener('scroll', function () {
+    var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    
+    if (top <= ($('#main').height() + 20)) {
+      $('.gradient').removeClass('with-text');
+    } else {
+      $('.gradient').addClass('with-text');
+    }
+  });
+
+
+  //  -- menu click --
+  $('#menu li').click(function (e) {
+    e.preventDefault();
+
+    var _whereToScroll = $('#' + $(this).attr('data-click')).position().top;
+    console.log(_whereToScroll);
+
+    $('html,body').animate({
+      scrollTop: _whereToScroll - 50
+    }, 500);
+
+    return false;
+  });
+
+
 });
