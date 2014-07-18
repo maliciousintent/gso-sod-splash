@@ -109,7 +109,7 @@ $(function () {
       var _whereToScroll = $('#' + $(this).attr('data-click')).position().top;
 
       $('html, body').animate({
-        scrollTop: _whereToScroll
+        scrollTop: _whereToScroll - 50
       }, 500);
 
       $('#menu li').removeClass('active');

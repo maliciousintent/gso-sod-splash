@@ -67,7 +67,8 @@ block main
           p Condividi!
           .addthis_sharing_toolbox
           script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53b56d9d2987a50c')
-        .spacer-10
+
+        .spacer-30
         
 
     .pure-u-1.pure-u-md-1-2
@@ -110,7 +111,7 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-yellow
-                  h4 9.30 - 11.30
+                  h4 9:30 - 11:30
                   h2 Tavola rotonda
                   h3 Dalla comunità alla community
             .pure-u-1.pure-u-md-1-2
@@ -121,8 +122,8 @@ block programma
                     li Luca Solari – Hitrea
                     li Marco Vitale – Fondazione Olivetti
                     li Elisabetta Caldera – Vodafone
-                    li Nicola Palmarini - Arepo Bp
-                    li Paolo Zanenga - TWG Consulting
+                    li Nicola Palmarini – Arepo Bp
+                    li Paolo Zanenga – TWG Consulting
                     li Piermarco Aroldi – OssCom
 
 
@@ -132,18 +133,24 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-orange
-                  h4 11.45 - 12.00
+                  h4 11:45 - 12:00
                     br
-                    | 12.25 - 12.45
+                    | 12:25 - 12:45
                   h2 Smart Speech
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding
                   h4 Relatori
                   ul
-                    li SALA 1: A. Donadio, Community Enabling
-                    li SALA 2: C. Colombo, Social Portal
-                    li SALA 3: A. Galardi, Social Engagement
+                    li 
+                      i SALA 1 
+                      | A. Donadio, Community Enabling
+                    li
+                      i SALA 2
+                      | C. Colombo, Social Portal
+                    li 
+                      i SALA 3 
+                      | A. Galardi, Social Engagement
 
           .spacer-50
 
@@ -151,17 +158,21 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-orange
-                  h4 12.05 - 12.20
+                  h4 12:05 - 12:20
                     br
-                    | 12.45 - 13.00
+                    | 12:45 - 13:00
                   h2 Smarth Speech
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding
                   h4 Relatori
                   ul
-                    li SALA 1: V. Marini, Social Recruiting e Employer branding
-                    li SALA 2: R. Pezza, Social Learning
+                    li 
+                      i SALA 1 
+                      | V. Marini, Social Recruiting e Employer branding
+                    li 
+                      i SALA 2 
+                      | R. Pezza, Social Learning
 
           .spacer-50
 
@@ -169,7 +180,7 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-green
-                  h4 13.30 - 14.30
+                  h4 13:30 - 14:30
                   h2 Lunch
 
           .spacer-50
@@ -178,16 +189,22 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-azure
-                  h4 14.30 - 16.30
+                  h4 14:30 - 16:30
                   h2 Workshop
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding
                   h4 Relatori
                   ul
-                    li SALA 1: La governance del cambiamento
-                    li SALA 2: L’Agile Management
-                    li SALA 3: Le organizzazioni sono community
+                    li 
+                      i SALA 1 
+                      | La governance del cambiamento
+                    li 
+                      i SALA 2 
+                      | L’Agile Management
+                    li 
+                      i SALA 3 
+                      | Le organizzazioni sono community
 
           .spacer-50
 
@@ -195,12 +212,9 @@ block programma
             .pure-u-1.pure-u-md-1-2
               .text
                 .padding.border.border-green
-                  h4 17.00
+                  h4 17:00
                   h2 Conclusione
 
-
-
-  .spacer-100
 
 
 block relatori
@@ -240,12 +254,10 @@ block relatori
                   Dal 2013 dirige  OssCom, Centro di ricerca sui media e la comunicazione dell'Università Cattolica.
 
 
-  .spacer-100
-
 
 block iscriviti
   .pure-g
-    .pure-u-1.pure-u-md-1-2
+    .pure-u-1.pure-u-md-2-3
       .pl.pr
         h1 Iscriviti
         p
@@ -253,8 +265,51 @@ block iscriviti
           code
             | Hitrea Srl
             br
+            br
             | IBAN IT23X0303211705010000000427BICSELBIT2BXXX
         p
           | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
         p
           | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
+
+        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='')
+          p
+            | I campi con 
+            b * 
+            | sono obbligatori.
+
+          label(for='nome-cognome') Nome e cognome*
+          input(type='text', id='nome-cognome', name='nome-cognome', required)
+
+          label(for='email') Indirizzo e-mail*
+          input(type='email', id='email', name='email', required)
+
+          label(for='azienda') Azienda*
+          input(type='text', id='azienda', name='azienda', required)
+
+          label(for='ruolo') Ruolo*
+          input(type='text', id='ruolo', name='ruolo', required)
+
+          label(for='telefono') Telefono*
+          input(type='text', id='telefono', name='telefono', required)
+
+          label(for='promo-code') Promo Code
+          input(type='text', id='promo-code', name='promo-code')
+
+          label(for='fattura-intestazione') Intestazione eventuale fattura
+          textarea(type='text', id='fattura-intestazione', name='fattura-intestazione')
+
+          label(for='fattura-indirizzo') Indirizzo spedizione fattura
+          textarea(id='fattura-indirizzo', name='fattura-indirizzo')
+
+          label(for='trattamento-dati-personali') 
+            input(type='checkbox', id ='trattamento-dati-personali', name='trattamento-dati-personali', required)
+            | &nbsp; Autorizzo al trattamento dei miei dati personali*
+
+          label(for='trattamento-riprese') 
+            input(type='checkbox', id ='trattamento-riprese', name='trattamento-riprese', required)
+            | &nbsp; Autorizzo la ripresa audio-video e la sua diffusione a mezzo web*
+
+          button.pure-button.pure-button-primary(type='submit')
+            i.fa.fa-check
+            span Invia

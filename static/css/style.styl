@@ -120,21 +120,22 @@ body
     display none
 
   #menu
-    position absolute
-    top 0
-    left 50px
-    z-index 3
+    position fixed
+    top auto
+    left auto
+    z-index 15
     ul
-      margin 0
+      margin 0 0 0 50px
       padding 0
       li
         list-style-type none
         cursor pointer
         position relative
         display inline-block
+        margin-right 10px
         span
           transition background 0.5s ease
-          background rgba(_black, 0.8)
+          background rgba(_black, 0.9)
           padding 10px
           font-size 16px
           display inline-block
@@ -308,6 +309,11 @@ body
           ul
             margin 0
             padding 0
+          h4,
+          h3
+            font-weight 300
+          h2
+            margin 10px 0
           p,
           ul li
             font-size 15px
@@ -369,6 +375,32 @@ body
         border-left 5px solid rgba(_white, 0.7)
         padding 5px 0 5px 20px
         word-break break-all
+    #subscribe-form
+      input,
+      textarea
+        border 3px solid #aaa
+        box-shadow none
+        margin-bottom 10px
+        transition border-color 0.5s ease
+        &:focus
+          border-color _green
+      textarea
+        width 70%
+        height 100px
+        resize vertical
+      label
+        font-size 14px
+      button
+        margin-top 20px
+        background _green
+        i,
+        span
+          display inline-block
+          vertical-align middle
+        span
+          margin-left 5px
+          @extends .montserrat
+          text-transform uppercase
         
 
 
@@ -421,8 +453,10 @@ body
       width 100%
       text-align center
       ul
+        margin 0
         li
           width 100%
+          margin 0
           span
             display block
 
