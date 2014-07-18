@@ -116,40 +116,34 @@ body
       vertical-align middle
       width 220px
 
+  #top-mobile
+    display none
+
   #menu
-    position fixed
-    top 10px
-    left 10px
+    position absolute
+    top 0
+    left 50px
     z-index 3
     ul
       margin 0
       padding 0
       li
         list-style-type none
-        margin-bottom 20px
         cursor pointer
-        overflow hidden
         position relative
-        &:last-child
-          margin-bottom 0px
-        i,
+        display inline-block
         span
+          transition background 0.5s ease
+          background rgba(_black, 0.8)
+          padding 10px
+          font-size 16px
           display inline-block
-          vertical-align middle
-        i
-          font-size 24px
-        span
-          transition margin-left 1s ease
-          margin-left -500px
-          padding 2px 5px
-          background rgba(_green, 0.8)
-          border-radius 5px
-          font-size 12px
           @extends .montserrat
-        &:hover
+          text-transform uppercase
+        &:hover,
+        &.active
           span
-            margin-left 10px
-            transition margin-left 1s ease
+            background rgba(_green, 0.9)
 
   #main
     position relative
@@ -280,13 +274,19 @@ body
 
 
 
-  #programma
+
+
+  #programma,
+  #relatori,
+  #iscriviti
     h1
       @extends .montserrat
-      margin-bottom 10px
+      margin-bottom 30px
       border-bottom 2px solid rgba(_white, 0.5)
       display inline-block
       padding-bottom 2px
+
+  #programma
     #agenda
       .row
         .border
@@ -322,10 +322,12 @@ body
         display inline-block
         width _picSize
         height _picSize
-        border-radius (_picSize / 2)
+        border-radius ((_picSize + 3) / 2)
         overflow hidden
         margin 0 10px 10px 0
         cursor pointer
+        border 3px solid _white
+        transition border-color
         img
           transition opacity 0.5s ease
           opacity 0.5
@@ -333,6 +335,7 @@ body
           height auto
           border-radius 50%
         &.active
+          border-color _green
           img
             opacity 1
       
@@ -357,6 +360,15 @@ body
           color _white
           border-bottom 2px solid rgba(_white, 0.5)
           text-decoration none
+
+  #iscriviti
+    p
+      code
+        display block
+        margin 20px auto
+        border-left 5px solid rgba(_white, 0.7)
+        padding 5px 0 5px 20px
+        word-break break-all
         
 
 
@@ -373,25 +385,46 @@ body
     padding-left _padding
   .pr
     padding-right _padding
+
   body
     
-    #menu
-      top 0px
-      left 0px
+    #top-mobile
+      display block
+      position fixed
       z-index 100
       width 100%
-      background rgba(_white, 0.9)
-      height 40px
+      background _white
+      transition top 0.5s ease
+      overflow hidden
+      height 35px
+      top -35px
+      &.show
+        top 0px
+      ul
+        margin 0
+        padding 0
+        li
+          text-align center
+          color _black
+          cursor pointer
+          span
+            padding 5px 10px
+            display block
+            @extends .montserrat
+            text-transform uppercase
+    
+    #menu
+      position relative!important
+      top 0px
+      left 0px
+      z-index 10
+      width 100%
       text-align center
       ul
         li
-          display inline-block
-          margin 5px 10px
-          i
-            color _black
+          width 100%
           span
-            display none
-            transition none
+            display block
 
     .share-container
       width 100%!important
@@ -405,6 +438,7 @@ body
       position relative
       .spacer-100
         height 0px
+
     #main
       text-align center
       .abstract
@@ -435,6 +469,7 @@ body
           width 100%
           display block
           margin 0 auto
+
     footer,
     .partners-fix
       .partners-container
@@ -472,6 +507,23 @@ body
       .tc
         img.partner
           margin 0!important
+
+    #programma
+      #agenda
+        .row
+          .border
+            border-right 0px!important
+            border-bottom 5px solid rgba(_white, 0)
+            margin-right 0px!important
+            margin-bottom 20px
+            &.border-yellow
+              border-color rgba(_yellowH, 0.75)
+            &.border-orange
+              border-color rgba(_orangeH, 0.75)
+            &.border-green
+              border-color rgba(_greenH, 0.75)
+            &.border-azure
+              border-color rgba(_azureH, 0.75)
 
 
 //  - import other styles

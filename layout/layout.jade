@@ -30,20 +30,22 @@ html(prefix='og: http://ogp.me/ns#')
   body
     .gradient
 
-    #menu
+    #top-mobile
       ul
-        li(data-click='programma')
-          i.fa.fa-file-text-o
-          span Programma
-        li(data-click='relatori')
-          i.fa.fa-users
-          span Relatori
-        li(data-click='iscriviti')
-          i.fa.fa-send-o
-          span Iscriviti
+        li(data-click='top')
+          span Torna in cima
+
 
     .container
 
+      #menu
+        ul
+          li(data-click='programma')
+            span Programma
+          li(data-click='relatori')
+            span Relatori
+          li(data-click='iscriviti')
+            span Iscriviti
 
       .spacer-20
 
@@ -92,4 +94,5 @@ html(prefix='og: http://ogp.me/ns#')
     //-script(type='text/javascript', src='static/js/vendor/jquery.downCount.js')
     //-script(type='text/javascript', src='static/js/vendor/humanize-duration-custom.js')
     script(type='text/javascript', src='static/js/vendor/swipe.js')
+    script(type='text/javascript', src='static/js/vendor/isMobile.min.js')
     script(type='text/javascript', src='static/js/main.min.js')

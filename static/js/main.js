@@ -1,5 +1,5 @@
 /*jshint browser:true, laxcomma:true, eqnull:true, indent:2, unused:true, undef:true, devel:true*/
-/*globals $, Swipe*/
+/*globals $, Swipe, isMobile*/
 
 
 $(function () {
@@ -46,7 +46,7 @@ $(function () {
   //  -- speakers slider --
   window.speakersSlide = new Swipe(document.getElementById('speakers'), {
     speed: 1000,
-    auto: 3000,
+    auto: 5000,
     continuous: true,
     disableScroll: false,
     stopPropagation: false,
@@ -63,6 +63,7 @@ $(function () {
     window.speakersSlide.slide(_i, 1000);
     $('#speakers-thumbs span.pic').removeClass('active');
     $('#speakers-thumbs span.pic').eq(_i).addClass('active');
+    window.speakersSlide.setup();
     return false;
   });
 
@@ -77,6 +78,26 @@ $(function () {
     } else {
       $('.gradient').addClass('with-text');
     }
+
+    if (isMobile.any || document.documentElement.clientWidth <= 769) {
+      if (top > 250) {
+        $('#top-mobile').addClass('show');
+      } else {
+        $('#top-mobile').removeClass('show');
+      }
+    }
+  });
+
+
+  $('#top-mobile li').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+    
+    $('#menu li').removeClass('active');
+
+    return false;
   });
 
 
@@ -84,12 +105,16 @@ $(function () {
   $('#menu li').click(function (e) {
     e.preventDefault();
 
-    var _whereToScroll = $('#' + $(this).attr('data-click')).position().top;
-    console.log(_whereToScroll);
+    if (!$(this).hasClass('active')) {
+      var _whereToScroll = $('#' + $(this).attr('data-click')).position().top;
 
-    $('html,body').animate({
-      scrollTop: _whereToScroll - 50
-    }, 500);
+      $('html, body').animate({
+        scrollTop: _whereToScroll
+      }, 500);
+
+      $('#menu li').removeClass('active');
+      $(this).addClass('active');      
+    }
 
     return false;
   });
