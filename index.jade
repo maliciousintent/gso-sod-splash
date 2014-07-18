@@ -55,7 +55,7 @@ block main
         .subscribe.transition2.fadeIn
           .subscribe-btn
             p Resta aggiornato!
-            form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank')
+            form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank', onSubmit='return confirm("Procedendo la mail inserita verrà utilizzata esclusivamente per comunicazioni riguardanti il meeting e per elaborazioni amministrative interne. Continuare?");')
               .input-elements
                 input(type='hidden', name='b_d006ae2613ee762f9e573e14d_8999585e26', tabindex='-1', value='')
                 input#mce-EMAIL.email-input.required(type='email', name='EMAIL', placeholder='Il tuo indirizzo e-mail', required='required', data-validation-type='email')

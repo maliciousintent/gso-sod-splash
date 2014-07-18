@@ -68,7 +68,6 @@ $(function () {
   });
 
 
-
   //  -- check scroll position --
   window.addEventListener('scroll', function () {
     var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
