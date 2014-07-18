@@ -20,17 +20,16 @@ block main
     .pure-u-1.pure-u-md-1-2
       .spacer-10
       .pl.pr
-        .partners-fix.transition.fadeIn
-          .partners-container.tc
-            .partners
-              .tl.fix-box
-                img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
-                small.tl.fix
-                  b Hitrea 
-                  | è membro di 
-                  b GSO Company
-              .tl.fix-box
-                img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 10px;')
+        .partners.transition.fadeIn
+          .tl.box
+            img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
+            small.tl.fix
+              b Hitrea 
+              | è membro di 
+              b GSO Company
+          .tl.box
+            img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 15px;')
+      .spacer-50
 
 
     .pure-u-1.pure-u-md-1-2
@@ -80,18 +79,16 @@ block main
       .spacer-10
 
       .pl.pr
-        footer.transition.fadeIn
-          .partners-container.tc
-            .partners
-              .tc
-                h5
-                  span Con il patrocinio di
-                img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
-            .partners
-              .tc
-                h5
-                  span Con la partecipazione di
-                img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+        footer
+          .partners.transition.fadeIn
+            .box.tl(style='margin-right:45px;')
+              h5
+                span Con il patrocinio di
+              img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
+            .box.tl
+              h5
+                span Con la partecipazione di
+              img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
 
 
 

@@ -201,8 +201,7 @@ body
       //-max-width 100%
       font-size 20px
 
-  footer,
-  .partners-fix
+  .partners
     clearfix()
     h5
       font-weight 400
@@ -210,23 +209,18 @@ body
       opacity 0.5
       span
         border-bottom 2px solid rgba(_white, 0.20)
-    .partners-container
-      clearfix()
-      .partners
-        display inline-block
-        vertical-align top
-        img
-          &.partner
-            width auto
-            height (156px / 2.5)
-            margin-right 30px
-        &.panda
-          float right
-          img
-            margin-right 0px
-            width auto
-            height 15px
-            opacity 0.1
+    .box
+      float left
+      &:first-child
+        margin-right 20px
+    img
+      &.partner
+        width auto
+        height (156px / 2.5)
+        margin-right 30px
+      &.partner-bigger
+        width auto
+        height (156px / 1.75)!important
     small
       display block
       margin 0
@@ -237,28 +231,8 @@ body
       &.fix
         margin-top -10px
 
-  .partners-fix
-    width 400
-    margin auto
-    .partners
-      img
-        vertical-align middle!important
-        display inline-block!important
-        height (156px / 2)!important
-        &.partner.no-margin
-          margin-right 0
-        &.partner-bigger
-          width auto
-          height (156px / 1.75)!important
 
-  .partners
-    clearfix()
-    .fix-box
-      float left
-      margin-right 10px
-
-
-
+  /*
   #countdown
     transition opacity 1s ease 0.5s !important
     opacity 0
@@ -271,10 +245,7 @@ body
       font-size 32px
       @extends .open-sans
       font-weight 300
-
-
-
-
+  */
 
 
   #programma,
@@ -383,6 +354,7 @@ body
         border-left 5px solid rgba(_white, 0.7)
         padding 5px 0 5px 20px
         word-break break-all
+        font-family monospace
     #subscribe-form
       input,
       textarea
@@ -520,43 +492,18 @@ body
           display block
           margin 0 auto
 
-    footer,
-    .partners-fix
-      .partners-container
-        text-align center!important
-        .partners
-          margin-bottom 20px
-          display block
-          .tl,
-          .tr
-            text-align center
-            img
-              margin 0
-          &.panda
-            float none
-            img
-              opacity 0.2
-              height 15px
-
-    .partners-fix
-      .partners
-        .tr
-          text-align center!important
-        img
-          display block!important
-          margin 0 auto!important
-          &:last-child
-            margin-bottom 20px!important
-
     .partners
-      clearfix()
-      .fix-box
-        float none!important
+      .box
+        text-align center
+        margin-right 0px!important
+        float none
         &:first-child
-          margin-bottom 10px
-      .tc
-        img.partner
-          margin 0!important
+          margin-bottom 10px!important
+      small
+        text-align center
+      img
+        &.partner
+          margin 0
 
     #programma
       #agenda
