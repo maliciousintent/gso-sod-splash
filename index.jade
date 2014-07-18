@@ -103,16 +103,20 @@ block programma
         #agenda
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-yellow
-                  h4 9:30 - 11:30
+                  
+                  .circle.circle-yellow
+                    span 9:30 - 11:30
+
+                  //-h4 9:30 - 11:30
                   h2 Tavola rotonda
                   h3 Dalla comunità alla community
-            .pure-u-1.pure-u-md-1-2
+            .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h4 Relatori
+                  h3 Relatori
                   ul
                     li Luca Solari – Hitrea
                     li Marco Vitale – Fondazione Olivetti
@@ -122,20 +126,26 @@ block programma
                     li Piermarco Aroldi – OssCom
 
 
-          .spacer-50
+          .spacer-70
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-orange
-                  h4 11:45 - 12:00
+                  
+                  .circle.circle-orange
+                    span
+                      | 11:45 - 12:00
+                      br
+                      | 12:25 - 12:45
+                  //-h4 11:45 - 12:00
                     br
                     | 12:25 - 12:45
                   h2 Smart Speech
-            .pure-u-1.pure-u-md-1-2
+            .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h4 Relatori
+                  h3 Relatori
                   ul
                     li 
                       i SALA 1 
@@ -147,20 +157,27 @@ block programma
                       i SALA 3 
                       | A. Galardi, Social Engagement
 
-          .spacer-50
+          .spacer-70
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-orange
-                  h4 12:05 - 12:20
+                  
+                  .circle.circle-orange
+                    span
+                      | 12:05 - 12:20
+                      br
+                      | 12:45 - 13:00
+
+                  //-h4 12:05 - 12:20
                     br
                     | 12:45 - 13:00
                   h2 Smarth Speech
-            .pure-u-1.pure-u-md-1-2
+            .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h4 Relatori
+                  h3 Relatori
                   ul
                     li 
                       i SALA 1 
@@ -169,27 +186,33 @@ block programma
                       i SALA 2 
                       | R. Pezza, Social Learning
 
-          .spacer-50
+          .spacer-70
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-green
-                  h4 13:30 - 14:30
+                  //- h4 13:30 - 14:30
+                  .circle.circle-green
+                    span
+                      | 13:30 - 14:30
                   h2 Lunch
 
-          .spacer-50
+          .spacer-70
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-azure
-                  h4 14:30 - 16:30
+                  .circle.circle-azure
+                    span
+                      | 14:30 - 16:30
+                  //-h4 14:30 - 16:30
                   h2 Workshop
-            .pure-u-1.pure-u-md-1-2
+            .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h4 Relatori
+                  h3 Relatori
                   ul
                     li 
                       i SALA 1 
@@ -201,13 +224,16 @@ block programma
                       i SALA 3 
                       | Le organizzazioni sono community
 
-          .spacer-50
+          .spacer-70
 
           .row.pure-g
-            .pure-u-1.pure-u-md-1-2
-              .text
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
                 .padding.border.border-green
-                  h4 17:00
+                  .circle.circle-green
+                    span
+                      | 17:00
+                  //-h4 17:00
                   h2 Conclusione
 
 
@@ -264,7 +290,7 @@ block iscriviti
             | IBAN IT23X0303211705010000000427BICSELBIT2BXXX
         p
           | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
-        p
+          br
           | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
 
         form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='//hitrea.us8.list-manage.com/subscribe/post?u=d006ae2613ee762f9e573e14d&amp;id=7bb2dc85b6', target='_blank')

@@ -135,7 +135,7 @@ body
         margin-right 10px
         span
           transition background 0.5s ease
-          background rgba(_black, 0.9)
+          background rgba(#999, 0.9)
           padding 10px
           font-size 16px
           display inline-block
@@ -229,7 +229,7 @@ body
       b
         font-weight 600
       &.fix
-        margin-top -10px
+        margin-top -25px
 
 
   /*
@@ -261,18 +261,48 @@ body
   #programma
     #agenda
       .row
+        .circle
+          display inline-block
+          _cWH = 120px
+          height _cWH
+          width _cWH
+          border-radius (_cWH / 2)
+          overflow hidden
+          position relative
+          span
+            color _white
+            @extends .montserrat
+            font-weight 400
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            width 100%
+            font-size 16px
+            text-align center
+          &.circle-yellow
+            background _yellowH
+          &.circle-orange
+            background _orangeH
+          &.circle-green
+            background _greenH
+          &.circle-azure
+            background _azureH
         .border
-          border-right 5px solid rgba(_white, 0)
+          border-right 3px solid rgba(_white, 0)
           margin-right 20px
           &.border-yellow
-            border-color rgba(_yellowH, 0.75)
+            border-color _yellowH
           &.border-orange
-            border-color rgba(_orangeH, 0.75)
+            border-color _orangeH
           &.border-green
-            border-color rgba(_greenH, 0.75)
+            border-color _greenH
           &.border-azure
-            border-color rgba(_azureH, 0.75)
+            border-color _azureH
         .text
+          &:first-child
+            .padding
+              padding-right 20px
           h2,
           h3,
           h4,
@@ -285,6 +315,8 @@ body
             font-weight 300
           h2
             margin 10px 0
+          h3
+            margin-bottom 20px
           p,
           ul li
             font-size 15px
@@ -351,12 +383,15 @@ body
       code
         display block
         margin 20px auto
-        border-left 5px solid rgba(_white, 0.7)
+        border-left 5px solid rgba(_white, 0.8)
         padding 5px 0 5px 20px
         word-break break-all
         font-family monospace
         font-size 16px
         line-height 16px
+      b
+        font-weight 600
+        border-bottom 2px solid rgba(_white, 0.5)
     #subscribe-form
       input,
       textarea
@@ -531,7 +566,8 @@ body
       #subscribe-form
         input[type="text"],
         input[type="email"],
-        textarea
+        textarea,
+        button
           width 100%
 
 //  - import other styles
