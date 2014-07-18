@@ -103,8 +103,6 @@ block programma
       .pl.pr
         h1 Programma
 
-        .spacer-50
-
         #agenda
 
           .row.pure-g
@@ -219,18 +217,18 @@ block programma
 
 block relatori
   .pure-g
-    .pure-u-1.pure-u-md-1-3
+    .pure-u-1.pure-u-md-1-6
       .pl.pr
         h1 Relatori
 
         #speakers-thumbs
           span.pic.active
-            img(src='http://lorempixel.com/100/100/people/', data-speaker-id='0')
+            img(src='static/img/relatori/luca-solari.jpg', data-speaker-id='0')
           span.pic
-            img(src='http://lorempixel.com/100/100/people/', data-speaker-id='1')
+            img(src='static/img/relatori/piermarco-aroldi.jpg', data-speaker-id='1')
 
 
-    .pure-u-1.pure-u-md-2-3#speakers-bios
+    .pure-u-1.pure-u-md-1-2#speakers-bios
 
       .spacer-50
 
@@ -296,7 +294,7 @@ block iscriviti
           label(for='promo-code') Promo Code
           input(type='text', id='promo-code', name='promo-code')
 
-          label(for='fattura-intestazione') Intestazione eventuale fattura
+          label(for='fattura-intestazione') Intestazione fattura
           textarea(type='text', id='fattura-intestazione', name='fattura-intestazione')
 
           label(for='fattura-indirizzo') Indirizzo spedizione fattura

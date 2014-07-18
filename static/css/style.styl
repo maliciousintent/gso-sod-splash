@@ -317,13 +317,21 @@ body
           p,
           ul li
             font-size 15px
+            line-height 20px
           ul
             li
               list-style-type none
+              margin 2px 0
+              i
+                font-style normal
+                font-weight 600
+                display inline-block
+                margin-right 5px
+                border-bottom 2px solid rgba(_white, 0.5)
 
   #relatori
     #speakers-thumbs
-      _picSize = 75px
+      _picSize = 90px
       span.pic
         display inline-block
         width _picSize
@@ -332,7 +340,7 @@ body
         overflow hidden
         margin 0 10px 10px 0
         cursor pointer
-        border 3px solid _white
+        border 3px solid rgba(_white, 0.75)
         transition border-color
         img
           transition opacity 0.5s ease
@@ -384,12 +392,16 @@ body
         transition border-color 0.5s ease
         &:focus
           border-color _green
+      input[type="text"],
+      input[type="email"]
+        width 50%
       textarea
         width 70%
         height 100px
         resize vertical
       label
         font-size 14px
+        line-height 14px
       button
         margin-top 20px
         background _green
@@ -463,11 +475,15 @@ body
     .share-container
       width 100%!important
       margin 0 auto 50px auto
+
     .container
       width auto
       max-width 100%
       & > .spacer-60
         height 20px
+      & > .spacer-50
+        display none
+
     header
       position relative
       .spacer-100
@@ -550,6 +566,7 @@ body
             border-bottom 5px solid rgba(_white, 0)
             margin-right 0px!important
             margin-bottom 20px
+            padding-bottom 5px
             &.border-yellow
               border-color rgba(_yellowH, 0.75)
             &.border-orange
@@ -559,6 +576,12 @@ body
             &.border-azure
               border-color rgba(_azureH, 0.75)
 
+    #iscriviti
+      #subscribe-form
+        input[type="text"],
+        input[type="email"],
+        textarea
+          width 100%
 
 //  - import other styles
 @import('form')
