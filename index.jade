@@ -270,42 +270,45 @@ block iscriviti
         p
           | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
 
-        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='')
+        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='//hitrea.us8.list-manage.com/subscribe/post?u=d006ae2613ee762f9e573e14d&amp;id=7bb2dc85b6', target='_blank')
           p
             | I campi con 
             b * 
             | sono obbligatori.
 
-          label(for='nome-cognome') Nome e cognome*
-          input(type='text', id='nome-cognome', name='nome-cognome', required)
+          label(for='mce-FNAME') Nome e cognome*
+          input(type='text', id='mce-FNAME', name='FNAME', required)
 
-          label(for='email') Indirizzo e-mail*
-          input(type='email', id='email', name='email', required)
+          label(for='mce-EMAIL') Indirizzo e-mail*
+          input(type='email', id='mce-EMAIL', name='EMAIL', required)
 
-          label(for='azienda') Azienda*
-          input(type='text', id='azienda', name='azienda', required)
+          label(for='mce-MMERGE3') Azienda*
+          input(type='text', id='mce-MMERGE3', name='MMERGE3', required)
 
-          label(for='ruolo') Ruolo*
-          input(type='text', id='ruolo', name='ruolo', required)
+          label(for='mce-MMERGE4') Ruolo*
+          input(type='text', id='mce-MMERGE4', name='MMERGE4', required)
 
-          label(for='telefono') Telefono*
-          input(type='text', id='telefono', name='telefono', required)
+          label(for='mce-MMERGE5') Telefono*
+          input(type='text', id='mce-MMERGE5', name='MMERGE5', required)
 
-          label(for='promo-code') Promo Code
-          input(type='text', id='promo-code', name='promo-code')
+          label(for='mce-MMERGE6') Riferimento CRO bonifico
+          input(type='text', id='mce-MMERGE6', name='MMERGE6', required)
 
-          label(for='fattura-intestazione') Intestazione fattura
-          textarea(type='text', id='fattura-intestazione', name='fattura-intestazione')
+          label(for='mce-MMERGE7') Promo Code
+          input(type='text', id='mce-MMERGE7', name='MMERGE7')
 
-          label(for='fattura-indirizzo') Indirizzo spedizione fattura
-          textarea(id='fattura-indirizzo', name='fattura-indirizzo')
+          label(for='mce-MMERGE8') Intestazione fattura
+          textarea(type='text', id='mce-MMERGE8', name='MMERGE8')
 
-          label(for='trattamento-dati-personali') 
-            input(type='checkbox', id ='trattamento-dati-personali', name='trattamento-dati-personali', required)
+          label(for='mce-MMERGE9') Indirizzo e-mail spedizione fattura
+          input(type='email', id='mce-MMERGE9', name='MMERGE9')
+
+          label(for='mce-group[3509]-3509-0') 
+            input(type='checkbox', id ='mce-group[3509]-3509-0', name='group[3509][1]', required)
             | &nbsp; Autorizzo al trattamento dei miei dati personali*
 
-          label(for='trattamento-riprese') 
-            input(type='checkbox', id ='trattamento-riprese', name='trattamento-riprese', required)
+          label(for='mce-group[3509]-3509-1') 
+            input(type='checkbox', id ='mce-group[3509]-3509-1', name='group[3509][2]', required)
             | &nbsp; Autorizzo la ripresa audio-video e la sua diffusione a mezzo web*
 
           button.pure-button.pure-button-primary(type='submit')
