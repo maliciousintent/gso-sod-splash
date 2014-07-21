@@ -1,0 +1,96 @@
+doctype html
+html(prefix='og: http://ogp.me/ns#')
+
+  head
+    title Social Organization Day - Social HR - Coming soon
+
+    meta(charset='utf-8')
+    meta(property='og:title', content='Social Organization Day')
+    meta(property='og:type', content='website')
+    meta(name='author', content='GSO Communication Company & Plastic Panda')
+    meta(name='description', content='Social Organization Day - Cosa accade quando la sfida dei social media si gioca all\'interno dell\'organizzazione?')
+    meta(name='keywords', content='Social, social, Organization, organization, Day, day, Comunication, comunication, Community, community')
+    meta(property='og:image' content='http://www.socialorganizationday.it/static/img/og-image.png')
+    meta(property='og:description' content='Social Organization Day - Cosa accade quando la sfida dei social media si gioca all\'interno dell\'organizzazione?')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css')
+    link(rel='shortcut icon', href='static/img/favicon.png', type='image/png')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='static/css/style.css?v=2')
+
+    <!--[if lt IE 8]>
+    script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
+    script.
+      window.html5 || document.write('<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"><\\/script>')
+    <![endif]-->
+
+  body
+    .gradient
+
+    #top-mobile
+      ul
+        li(data-click='top')
+          span Torna in cima
+
+
+    .container
+
+      #menu.transition.fadeIn
+        ul
+          li(data-click='programma')
+            span Programma
+          li(data-click='relatori')
+            span Relatori
+          li(data-click='iscriviti')
+            span Iscriviti
+
+      .spacer-50
+
+
+      #main
+
+        block main
+
+
+      .spacer-150
+
+
+      #programma.transition.fadeIn
+
+        block programma
+
+
+      .spacer-150
+
+
+      #relatori.transition.fadeIn
+
+        block relatori
+
+
+      .spacer-150
+
+
+      #iscriviti.transition.fadeIn
+
+        block iscriviti
+
+
+      .spacer-100
+
+
+    |<script type='text/javascript'>
+    |(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    |(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    |m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    |})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    |ga('create', 'UA-52406942-1', 'auto');
+    |ga('send', 'pageview');
+    |</script>
+
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(type='text/javascript', src='static/js/vendor/isMobile.min.js')
+    script(type='text/javascript', src='static/js/main.min.js')

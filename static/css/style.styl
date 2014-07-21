@@ -2,21 +2,28 @@
 @import('nib');
 
 //  - load webfonts from Google
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
-@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Montserrat:400,700|Roboto+Slab');
 
 //  - font style
 .open-sans
   font-family 'Open Sans', sans-serif
 .montserrat
   font-family 'Montserrat', sans-serif
+.roboto-slab
+  font-family 'Roboto Slab', serif
 
 
 //  - colors and other vars
 _black = #000
 _white = #fff
 _green = #29b473
-_padding = 40px
+_yellowH = #fdc14f
+_orangeH = #f67036
+_greenH = #32b650
+_azureH = #79d8d9
+
+_padding = 50px
+
 
 //  - reset purecss fonts
 .pure-g [class *='pure-u'],
@@ -78,6 +85,9 @@ body
     width 100%
     height 100%
     background rgba(_black, 0.45)
+    transition background 0.5s ease
+    &.with-text
+      background rgba(_black, 0.75)
 
   .container
     position relative
@@ -107,6 +117,36 @@ body
       vertical-align middle
       width 220px
 
+  #top-mobile
+    display none
+
+  #menu
+    position fixed
+    top auto
+    left auto
+    z-index 15
+    ul
+      margin 0 0 0 50px
+      padding 0
+      li
+        list-style-type none
+        cursor pointer
+        position relative
+        display inline-block
+        margin-right 10px
+        span
+          transition background 0.5s ease
+          background rgba(#999, 0.9)
+          padding 10px
+          font-size 16px
+          display inline-block
+          @extends .montserrat
+          text-transform uppercase
+        &:hover,
+        &.active
+          span
+            background rgba(_green, 0.9)
+
   #main
     position relative
     z-index 4
@@ -115,6 +155,11 @@ body
         font-weight 300
         @extends .montserrat
         margin-bottom 50px
+        .twitter-icon
+          font-size 24px
+          display inline-block
+          margin-right 10px
+          font-weight normal
         a
           color _white
           text-decoration none
@@ -157,8 +202,7 @@ body
       //-max-width 100%
       font-size 20px
 
-  footer,
-  .partners-fix
+  .partners
     clearfix()
     h5
       font-weight 400
@@ -166,23 +210,18 @@ body
       opacity 0.5
       span
         border-bottom 2px solid rgba(_white, 0.20)
-    .partners-container
-      clearfix()
-      .partners
-        display inline-block
-        vertical-align top
-        img
-          &.partner
-            width auto
-            height (156px / 2.5)
-            margin-right 30px
-        &.panda
-          float right
-          img
-            margin-right 0px
-            width auto
-            height 15px
-            opacity 0.1
+    .box
+      float left
+      &:first-child
+        margin-right 20px
+    img
+      &.partner
+        width auto
+        height (156px / 2.5)
+        margin-right 30px
+      &.partner-bigger
+        width auto
+        height (156px / 1.75)!important
     small
       display block
       margin 0
@@ -191,26 +230,227 @@ body
       b
         font-weight 600
       &.fix
-        margin-top -10px
+        margin-top -25px
 
-  .partners-fix
-    width 400
-    margin auto
-    .partners
-      img
-        vertical-align middle!important
-        display inline-block!important
-        height (156px / 2)!important
-        &.partner.no-margin
-          margin-right 0
-        &.partner-bigger
-          width auto
-          height (156px / 1.75)!important
 
-  .partners
-    clearfix()
-    .fix-box
-      float left
+  /*
+  #countdown
+    transition opacity 1s ease 0.5s !important
+    opacity 0
+    &.show
+      opacity 1
+    h4
+      @extends .montserrat
+      font-size 24px
+    & > span
+      font-size 32px
+      @extends .open-sans
+      font-weight 300
+  */
+
+
+  #programma,
+  #relatori,
+  #iscriviti
+    h1
+      @extends .montserrat
+      margin-bottom 30px
+      span
+        border-bottom 3px solid rgba(_white, 0.5)
+        padding-bottom 2px
+
+  #programma
+    #agenda
+      .row
+        .circle
+          display inline-block
+          _cWH = 120px
+          height _cWH
+          width _cWH
+          border-radius (_cWH / 2)
+          overflow hidden
+          position relative
+          span
+            color _white
+            @extends .montserrat
+            font-weight 400
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            width 100%
+            font-size 16px
+            text-align center
+          &.circle-yellow
+            background _yellowH
+          &.circle-orange
+            background _orangeH
+          &.circle-green
+            background _greenH
+          &.circle-azure
+            background _azureH
+        .border
+          border-right 3px dotted rgba(_white, 0)
+          margin-right 20px
+          &.border-yellow
+            border-color _yellowH
+          &.border-orange
+            border-color _orangeH
+          &.border-green
+            border-color _greenH
+          &.border-azure
+            border-color _azureH
+        .valign
+          position relative
+          .text
+            position absolute
+            top 50%
+            left 0
+            transform translate(0px, -50%)
+        .text
+          &:first-child
+            .padding
+              padding-right 20px
+          h2,
+          h3,
+          h4,
+          p,
+          ul
+            margin 0
+            padding 0
+          h4,
+          h3
+            font-weight 300
+          h2
+            margin 10px 0
+          h3
+            margin-bottom 10px
+          h2,
+          h3,
+          h4
+            a
+              color _white
+              transition color 0.5s ease, border-color 0.5s ease
+              text-decoration none
+              border-bottom 1px dotted _white
+              &:hover
+                color _green
+                border-color _green
+          p,
+          ul li
+            font-size 15px
+            line-height 20px
+          ul
+            margin-bottom 10px
+            li
+              list-style-type none
+              margin 2px 0
+              i
+                font-style normal
+                font-weight 600
+                display inline-block
+                margin-right 5px
+                border-bottom 2px solid rgba(_white, 0.5)
+              span
+                @extends .roboto-slab
+
+  #relatori
+    #speakers
+      .single-speaker
+        _picSize = 90px
+        span.pic
+          width _picSize
+          height _picSize
+          border-radius ((_picSize + 3) / 2)
+          overflow hidden
+          margin 0 10px 10px 0
+          cursor pointer
+          border 3px solid rgba(_white, 0.75)
+          transition border-color
+          img
+            transition opacity 0.2s ease
+            opacity 0.5
+            width 100%
+            height auto
+            border-radius 50%
+          &.active
+            border-color _green
+            img
+              opacity 1
+        h2
+          transition color
+          &.active
+            color _green
+        h2,
+        span.pic
+          display inline-block
+          vertical-align middle
+          cursor pointer
+        .text
+          display none
+          font-size 14px
+          color _white
+          @extends .roboto-slab
+          line-height 24px
+          a
+            color _white
+            border-bottom 2px solid rgba(_white, 0.5)
+            text-decoration none
+        &:hover
+          span.pic
+            border-color _green
+          h2
+            color _green
+
+  #iscriviti
+    p
+      code
+        display block
+        margin 20px auto
+        border-left 5px solid rgba(_white, 0.8)
+        padding 5px 0 5px 20px
+        word-break break-all
+        font-family monospace
+        font-size 16px
+        line-height 16px
+      b
+        font-weight 600
+        border-bottom 2px solid rgba(_white, 0.5)
+    #subscribe-form
+      small
+        display block
+        margin-bottom 20px
+      input,
+      textarea
+        border 3px solid #aaa
+        box-shadow none
+        margin-bottom 10px
+        transition border-color 0.5s ease
+        &:focus
+          border-color _green
+      input[type="text"],
+      input[type="email"]
+        width 50%
+      textarea
+        width 70%
+        height 100px
+        resize vertical
+      label
+        font-size 14px
+        line-height 14px
+      button
+        margin-top 20px
+        background _green
+        border-radius 4px
+        i,
+        span
+          display inline-block
+          vertical-align middle
+        span
+          margin-left 5px
+          @extends .montserrat
+          text-transform uppercase
+        
 
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
@@ -226,19 +466,68 @@ body
     padding-left _padding
   .pr
     padding-right _padding
+
   body
+    
+    #top-mobile
+      display block
+      position fixed
+      z-index 100
+      width 100%
+      background _white
+      transition top 0.5s ease
+      overflow hidden
+      height 35px
+      top -35px
+      &.show
+        top 0px
+      ul
+        margin 0
+        padding 0
+        li
+          text-align center
+          color _black
+          cursor pointer
+          span
+            padding 5px 10px
+            display block
+            @extends .montserrat
+            text-transform uppercase
+    
+    #menu
+      position relative!important
+      top 0px
+      left 0px
+      z-index 10
+      width 100%
+      text-align center
+      ul
+        margin 0
+        li
+          margin 0 1%
+          display inline-block
+          span
+            display block
+
     .share-container
       width 100%!important
       margin 0 auto 50px auto
+      p
+        @extends .montserrat
+
     .container
       width auto
       max-width 100%
       & > .spacer-60
         height 20px
+      & > .spacer-50
+        display none
+
     header
       position relative
       .spacer-100
         height 0px
+
     #main
       text-align center
       .abstract
@@ -269,45 +558,58 @@ body
           width 100%
           display block
           margin 0 auto
-    footer,
-    .partners-fix
-      .partners-container
-        text-align center!important
-        .partners
-          margin-bottom 20px
-          display block
-          .tl,
-          .tr
-            text-align center
-            img
-              margin 0
-          &.panda
-            float none
-            img
-              opacity 0.2
-              height 15px
-
-    .partners-fix
-      .partners
-        .tr
-          text-align center!important
-        img
-          display block!important
-          margin 0 auto!important
-          &:last-child
-            margin-bottom 20px!important
 
     .partners
-      clearfix()
-      .fix-box
-        float none!important
+      .box
+        text-align center
+        margin-right 0px!important
+        float none
         &:first-child
-          margin-bottom 10px
-      .tc
-        img.partner
-          margin 0!important
+          margin-bottom 10px!important
+      small
+        text-align center
+      img
+        &.partner
+          margin 0
 
+    #programma,
+    #relatori,
+    #iscriviti
+      h1
+        text-align center
+
+    #programma
+      #agenda
+        .row
+          .border
+            border-right 0px!important
+            border-bottom 5px dotted rgba(_white, 0)
+            margin-right 0px!important
+            margin-bottom 20px
+            padding-bottom 5px
+            &.border-yellow
+              border-color rgba(_yellowH, 0.75)
+            &.border-orange
+              border-color rgba(_orangeH, 0.75)
+            &.border-green
+              border-color rgba(_greenH, 0.75)
+            &.border-azure
+              border-color rgba(_azureH, 0.75)
+          .valign
+            .text
+              position relative
+              top auto
+              left auto
+              transform none
+              text-align center
+
+    #iscriviti
+      #subscribe-form
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button
+          width 100%
 
 //  - import other styles
-@import('clock')
 @import('form')

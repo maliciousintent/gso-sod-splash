@@ -1,189 +1,363 @@
-doctype html
-html(prefix='og: http://ogp.me/ns#')
+extends layout/layout
 
-  head
-    title Social Organization Day - Social HR - Coming soon
-
-    meta(charset='utf-8')
-    meta(property='og:title', content='Social Organization Day')
-    meta(property='og:type', content='website')
-    meta(name='author', content='GSO Communication Company & Plastic Panda')
-    meta(name='description', content='Social Organization Day - Cosa accade quando la sfida dei social media si gioca all\'interno dell\'organizzazione?')
-    meta(name='keywords', content='Social, social, Organization, organization, Day, day, Comunication, comunication, Community, community')
-    meta(property='og:image' content='http://www.socialorganizationday.it/static/img/og-image.png')
-    meta(property='og:description' content='Social Organization Day - Cosa accade quando la sfida dei social media si gioca all\'interno dell\'organizzazione?')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
-
-    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
-    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css')
-    link(rel='shortcut icon', href='static/img/favicon.png', type='image/png')
-    link(rel='stylesheet', href='static/css/style.css?v=2')
-
-    <!--[if lt IE 8]>
-    script(src='//html5shiv.googlecode.com/svn/trunk/html5.js')
-    script.
-      window.html5 || document.write('<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"><\\/script>')
-    <![endif]-->
-
-  body
-    .gradient
-
-    .container
-
-      .spacer-20
-
-      #main
-        .pure-g
-          .pure-u-1.pure-u-md-1-2
-            .pl.pr
-              .spacer-40
-              h5#hashtags.transition.fadeIn
-                span 
-                  a(href='http://twitter.com/hashtag/SOday14?f=realtime', target='_blank') #SOday14 
-                span
-                  a(href='http://twitter.com/hashtag/SocialOrg?f=realtime', target='_blank') #SocialOrg 
-                span
-                  a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
-              .spacer-10
+block main
+  .pure-g
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+        .spacer-40
+        h5#hashtags.transition.fadeIn
+          i.fa.fa-twitter.twitter-icon
+          span 
+            a(href='http://twitter.com/hashtag/SOday14?f=realtime', target='_blank') #SOday14 
+          span
+            a(href='http://twitter.com/hashtag/SocialOrg?f=realtime', target='_blank') #SocialOrg 
+          span
+            a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+        .spacer-10
 
 
 
-          .pure-u-1.pure-u-md-1-2
-            .pl.pr
-              .partners-fix.transition.fadeIn
-                .partners-container.tc
-                  .partners
-                    .tl.fix-box
-                      img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
-                      small.tl.fix
-                        b Hitrea 
-                        | è membro di 
-                        b GSO Company
-                    .tl.fix-box
-                      img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 10px;')
+    .pure-u-1.pure-u-md-1-2
+      .spacer-10
+      .pl.pr
+        .partners.transition.fadeIn
+          .tl.box
+            img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
+            small.tl.fix
+              b Hitrea 
+              | è membro di 
+              b GSO Company
+          .tl.box
+            img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 15px;')
+      .spacer-50
 
 
-          .pure-u-1.pure-u-md-1-2
-            .pl.pr
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
 
-              img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
+        img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
 
-              h2.transition.fadeIn
-                | Dalla comunit&agrave;<br />alle community
-              
-              p.when.transition.fadeIn
-                span.uppercase
-                  | Milano, 20 novembre 2014
-                //-
-                  br
-                  small Palazzo Castiglioni, c.so Venezia 47
-              
-              p.abstract.transition.fadeIn
-                | Cosa accade quando la sfida dei social media si gioca all'interno dell'organizzazione?
+        h2.transition.fadeIn
+          | Dalla comunit&agrave;
+          br
+          | alle community
+        
+        p.when.transition.fadeIn
+          span.uppercase
+            | Milano, 20 novembre 2014
+        
+        p.abstract.transition.fadeIn
+          | Cosa accade quando la sfida dei social media si gioca all'interno dell'organizzazione?
 
-              .spacer-60
+        .spacer-60
 
-              .subscribe.transition2.fadeIn
-                .subscribe-btn
-                  p Resta aggiornato!
-                  form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank')
-                    .input-elements
-                      input(type='hidden', name='b_d006ae2613ee762f9e573e14d_8999585e26', tabindex='-1', value='')
-                      input#mce-EMAIL.email-input.required(type='email', name='EMAIL', placeholder='Il tuo indirizzo e-mail', required='required', data-validation-type='email')
-                      button.email-btn(name='submit_email') OK
+        .subscribe.transition2.fadeIn
+          .subscribe-btn
+            p Resta aggiornato!
+            form.form.magic.send_email_form(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank', onSubmit='return confirm("Procedendo la mail inserita verrà utilizzata esclusivamente per comunicazioni riguardanti il meeting e per elaborazioni amministrative interne. Continuare?");')
+              .input-elements
+                input(type='hidden', name='b_d006ae2613ee762f9e573e14d_8999585e26', tabindex='-1', value='')
+                input#mce-EMAIL.email-input.required(type='email', name='EMAIL', placeholder='Il tuo indirizzo e-mail', required='required', data-validation-type='email')
+                button.email-btn(name='submit_email') OK
 
-              .spacer-30
+        .spacer-30
 
-              .share-container.transition2.fadeIn
-                p Condividi!
-                .addthis_sharing_toolbox
-                script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53b56d9d2987a50c')
-              .spacer-10
-              
+        .share-container.transition2.fadeIn
+          p Condividi!
+          .addthis_sharing_toolbox
+          script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53b56d9d2987a50c')
 
-          .pure-u-1.pure-u-md-1-2
+        .spacer-30
+        
 
-            .spacer-10
+    .pure-u-1.pure-u-md-1-2
 
-            .c-clock.transition.fadeIn
-              .clock-layout
-                .clock-container.clock-countdown
-                  .c-metric.c-layout
-                  .c-minute.c-layout.minutes
-                  .c-second.c-layout.seconds
-                  .c-fixed
-                    .c-day
-                      span.number.days &nbsp;
-                      span.metric giorni
-                    .c-hour
-                      span.number.hours &nbsp;
-                      span.metric ore
+      //-
+        #countdown.fadeIn.tc
+          h4 Mancano
+          span &nbsp;
+      .spacer-10
 
-            .spacer-80
-            .pl.pr
-              footer.transition.fadeIn
-                .partners-container.tc
-                  //-.partners
-                    .tl
-                      h5
-                        span Evento organizzato da
-                      img.partner(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
-                      img.partner(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
-                  .partners
-                    .tc
-                      h5
-                        span Con il patrocinio di
-                      img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
-                  .partners
-                    .tc
-                      h5
-                        span Con la partecipazione di
-                      img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
-                  //-.partners.panda
-                    .tr
-                      .spacer-60
-                      img.partner(src='static/img/partners/partner-plasticpanda.png', alt='Plastic Panda snc')
-
-          .pure-u-1
-            //-
-              .spacer-80
-              .pl.pr
-                footer.transition.fadeIn
-                  .partners-container
-                    //-.partners
-                      .tl
-                        h5
-                          span Evento organizzato da
-                        img.partner(src='static/img/partners/partner-hitrea.png', alt='Hitrea')
-                        img.partner(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione')
-                    .partners
-                      .tl
-                        h5
-                          span Con il patrocinio di
-                        img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
-                    .partners
-                      .tl
-                        h5
-                          span Con la partecipazione di
-                        img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
-                    //-.partners.panda
-                      .tr
-                        .spacer-60
-                        img.partner(src='static/img/partners/partner-plasticpanda.png', alt='Plastic Panda snc')
+      .pl.pr
+        footer
+          .partners.transition.fadeIn
+            .box.tl(style='margin-right:45px;')
+              h5
+                span Con il patrocinio di
+              img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
+            .box.tl
+              h5
+                span Con la partecipazione di
+              img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
 
 
-        .spacer-20
 
-    |<script type='text/javascript'>
-    |(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    |(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    |m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    |})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    |ga('create', 'UA-52406942-1', 'auto');
-    |ga('send', 'pageview');
-    |</script>
 
-    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-    script(type='text/javascript', src='static/js/vendor/jquery.downCount.js')
-    script(type='text/javascript', src='static/js/main.min.js')
+
+block programma
+  .pure-g
+    .pure-u-1.pure-u-md-2-3
+      .pl.pr
+        h1 
+          span Programma provvisorio
+
+        #agenda
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border.border-yellow
+                  .spacer-20
+                  .circle.circle-yellow
+                    span 9:30 - 11:30
+                  h2 Tavola rotonda
+                  h3 Dalla comunità alle community
+                  .spacer-10
+            .pure-u-1.pure-u-md-2-3.valign
+              .text
+                .padding
+                  h3 Chairman
+                  ul
+                    li 
+                      span Luca Solari  
+                      | – Hitrea
+                  .spacer-30
+                  h3 Relatori
+                  ul
+                    li 
+                      span Marco Vitale 
+                      | – Fondazione Olivetti
+                    li 
+                      span Elisabetta Caldera 
+                      | – Vodafone
+                    li 
+                      span Nicola Palmarini 
+                      | – Arepo Bp
+                    li 
+                      span Paolo Zanenga 
+                      | – TWG Consulting
+                    li 
+                      span Piermarco Aroldi 
+                      | – OssCom
+
+          .spacer-70
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border.border-orange
+                  .spacer-20
+                  .circle.circle-orange
+                    span
+                      | 11:45 - 12:00
+                      br
+                      | 12:25 - 12:45
+                  h2 I processi del 
+                    a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+                  .spacer-10
+            .pure-u-1.pure-u-md-2-3.valign
+              .text
+                .padding
+                  h3 Smart Speech
+                  ul
+                    li 
+                      i SALA 1 
+                      span A. Donadio, 
+                      | Community Enabling
+                    li
+                      i SALA 2
+                      span C. Colombo, 
+                      | Digital &amp; Social Enviroment
+                    li 
+                      i SALA 3 
+                      span A. Galardi, 
+                      | Social Engagement
+
+          .spacer-70
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border.border-orange
+                  .spacer-20
+                  .circle.circle-orange
+                    span
+                      | 12:05 - 12:20
+                      br
+                      | 12:45 - 13:00
+                  h2 I processi del 
+                    a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+                  .spacer-10
+            .pure-u-1.pure-u-md-2-3.valign
+              .text
+                .padding
+                  h3 Smart Speech
+                  ul
+                    li 
+                      i SALA 1 
+                      span V. Marini, 
+                      | Social Recruiting e Employer branding
+                    li 
+                      i SALA 2 
+                      span R. Pezza, 
+                      | Social Learning
+
+          .spacer-70
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border
+                  .circle.circle-green
+                    span
+                      | 13:30 - 14:30
+                  h2 Lunch
+
+          .spacer-70
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border.border-azure
+                  .spacer-20
+                  .circle.circle-azure
+                    span
+                      | 14:30 - 16:30
+                  h2 Strategia e Governance della 
+                    a(href='http://twitter.com/hashtag/SocialOrg?f=realtime', target='_blank') #SocialOrg
+                  .spacer-10
+            .pure-u-1.pure-u-md-2-3.valign
+              .text
+                .padding
+                  h3 Workshop
+                  ul
+                    li 
+                      i SALA 1 
+                      | La governance del cambiamento
+                    li 
+                      i SALA 2 
+                      | L'Agile Management
+                    li 
+                      i SALA 3 
+                      | Le organizzazioni sono community
+
+          .spacer-70
+
+          .row.pure-g
+            .pure-u-1.pure-u-md-1-3
+              .text.tc
+                .padding.border
+                  .circle.circle-green
+                    span
+                      | 17:00
+                  h2 Conclusione
+
+
+
+block relatori
+  .pure-g
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+        h1 
+          span Relatori
+
+        #speakers
+
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/luca-solari.jpg')
+            h2 Luca Solari
+            .text
+              :markdown
+                E' professore ordinario di Organizzazione e Gestione delle Risorse Umane all'Università degli Studi di Milano e docente del MBA del MIP-Politecnico. Ha conseguito il dottorato di ricerca in economia aziendale presso l'Università Luigi Bocconi di Milano. Ha un'esperienza significativa nella progettazione ed erogazione di programmi di cambiamento per Executive, con attività di coaching, formazione e consulenza basata sulla ricerca. Riveste oggi il ruolo di Corporate Sensemaker, Blogger e Social Media experimenter interessato al futuro delle organizzazioni.  
+                Nel 2013 è stato il primo e unico italiano a essere invitato come Keynote speaker alla Global Conference di HRPS a Denver, Colorado. È Academic in Residence per Executive Network. All'Academy of Management Conference di Philadelphia dell'agosto del 2014 un suo paper riceverà il Best Paper Award della HR Division.
+
+              .spacer-20
+
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/piermarco-aroldi.jpg')
+            h2 Piermarco Aroldi
+            .text
+              :markdown
+                Professore Associato presso la Facoltà di Scienze della Formazione di Milano e Piacenza, dove insegna "Sociologia dei processi culturali e comunicativi", "Media e culture dell'infanzia" e "Teorie e tecniche dei nuovi media".  
+                Dopo la laurea in Lettere moderne e il Diploma di specializzazione in Scienze della comunicazione ha conseguito il Dottorato di ricerca in Sociologia e metodologia della ricerca sociale; si occupa di sociologia della comunicazione e della cultura, con particolare attenzione all'ambito dei media; i suoi interessi scientifici si collocano nell'area degli studi sull'audience e l'esperienza mediale, soprattutto televisiva e online, sul rapporto media-minori e sulla media literacy. E' membro italiano dei network <a href="http://www.eukidsonline.net" target="_blank">Eu Kids Online</a> e <a href="http://www.netchildrengomobile.eu/" target="_blank">Net Children Go Mobile</a>, e della Cost Action IS096 <a href="http://www.cost-transforming-audiences.eu/" target="_blank">Transforming Audiences, Transforming Societies</a>; fa inoltre parte del Comitato di redazione della rivista Comunicazioni Sociali.  
+                Dal 2013 dirige  OssCom, Centro di ricerca sui media e la comunicazione dell'Università Cattolica.
+
+              .spacer-20
+
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/paolo-zanenga.jpg')
+            h2 Paolo Zanenga
+            .text
+              :markdown
+                Ingegnere, ha svolto attività di ricerca negli Stati Uniti, in Francia e in Italia nel campo della strategia e dell'organizzazione.Tiene un corso sulla complessità delle reti della conoscenza presso la Scuola di Dottorato del Politecnico di Torino, è docente presso Polidesign e Domus Academy, visiting speaker in Copenhagen Business School, SDA Bocconi, Parsons New School di NewYork e in altre accademie italiane e internazionali.  
+                Lavora su nuovi modelli dell'innovazione e dell'impresa, anche avvalendosi di reti internazionali di accademie e aziende. Fin dall'inizio della sua attività, si è dedicato a temi di frontiera riguardanti il rapporto tra tecnologie e organizzazioni. Nel 2010 la pubblicazione de “Le Reti di Diotima – Società della conoscenza ed economia della bellezza” per Carocci, porta alla fondazione della Diotima Society, associazione culturale internazionale che promuove, organizza, e sperimenta reti di conoscenza locali e globali, in modo da favorire superiori livelli di collaborazione tra imprese, istituzioni, comunità e singole persone. Fondatore di TWG Consulting, ha seguito importanti progetti di trasformazione e sviluppo (Finmeccanica, Ciba, Nestlè, Pfizer, GE, Telecom Italia,Governo Russo).  
+                E' CEO di Natam; membro dei “conclavi” di Dream:in; Presidente di PDMA per il Sud Europa; Membro della commissione Ricerca e Innovazione di Confindustria; Membro della rete internazionale Value Creation Group (Business Process Management).
+
+              .spacer-20
+
+
+
+
+block iscriviti
+  .pure-g
+    .pure-u-1.pure-u-md-2-3
+      .pl.pr
+        h1 
+          span Iscriviti
+        p
+          | L'iscrizione prevede un costo di euro 600,00 (+ IVA alle aliquote di legge vigenti), da versare via bonifico bancario a 
+          code
+            | Hitrea Srl
+            br
+            br
+            | IBAN IT23X0303211705010000000427BICSELBIT2BXXX
+        p
+          | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
+          br
+          | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
+
+        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='//hitrea.us8.list-manage.com/subscribe/post?u=d006ae2613ee762f9e573e14d&amp;id=7bb2dc85b6', target='_blank')
+          small
+            | I campi con * sono obbligatori.
+
+          label(for='mce-FNAME') Nome e cognome*
+          input(type='text', id='mce-FNAME', name='FNAME', required)
+
+          label(for='mce-EMAIL') Indirizzo e-mail*
+          input(type='email', id='mce-EMAIL', name='EMAIL', required)
+
+          label(for='mce-MMERGE3') Azienda*
+          input(type='text', id='mce-MMERGE3', name='MMERGE3', required)
+
+          label(for='mce-MMERGE4') Ruolo*
+          input(type='text', id='mce-MMERGE4', name='MMERGE4', required)
+
+          label(for='mce-MMERGE5') Telefono*
+          input(type='text', id='mce-MMERGE5', name='MMERGE5', required)
+
+          label(for='mce-MMERGE6') Riferimento CRO bonifico
+          input(type='text', id='mce-MMERGE6', name='MMERGE6', required)
+
+          label(for='mce-MMERGE7') Promo Code
+          input(type='text', id='mce-MMERGE7', name='MMERGE7')
+
+          label(for='mce-MMERGE8') Intestazione fattura
+          textarea(type='text', id='mce-MMERGE8', name='MMERGE8')
+
+          label(for='mce-MMERGE9') Indirizzo e-mail spedizione fattura
+          input(type='email', id='mce-MMERGE9', name='MMERGE9')
+
+          label(for='mce-group[3509]-3509-0') 
+            input(type='checkbox', id ='mce-group[3509]-3509-0', name='group[3509][1]', required)
+            | &nbsp; Autorizzo al trattamento dei miei dati personali*
+
+          label(for='mce-group[3509]-3509-1') 
+            input(type='checkbox', id ='mce-group[3509]-3509-1', name='group[3509][2]', required)
+            | &nbsp; Autorizzo la ripresa audio-video e la sua diffusione a mezzo web*
+
+          button.pure-button.pure-button-primary(type='submit')
+            i.fa.fa-check
+            span Invia
