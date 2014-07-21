@@ -79,16 +79,31 @@ block main
       .spacer-10
 
       .pl.pr
-        footer
-          .partners.transition.fadeIn
-            .box.tl(style='margin-right:45px;')
-              h5
-                span Con il patrocinio di
-              img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
-            .box.tl
-              h5
-                span Con la partecipazione di
-              img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+        .partners.f-partners.transition.fadeIn
+          .box.tl(style='margin-right:45px;')
+            h5
+              span Con il patrocinio di
+            img.partner(src='static/img/partners/partner-olivetti.png', alt='Fondazione Olivetti')
+            .text
+            //-
+              .pl.pr
+                :markdown
+                  Fondazione Olivetti
+
+          .box.tl
+            h5
+              span Con la partecipazione di
+            img.partner(src='static/img/partners/partner-cattolica.png', alt='Università Cattolica del Sacro Cuore - Centro di ricerca sui media e la comunicazione')
+            .text
+              .pl.pr
+                :markdown
+                  OssCom, Centro di ricerca sui media e la comunicazione, è stato fondato nel 1994 allo scopo di condurre ricerca teorica e applicata nel campo del sistema dei media e dell'industria culturale italiana.  
+                  L'obiettivo primario del Centro è costituire un'interfaccia tra la ricerca accademica e il mondo professionale fornendo un supporto alle imprese e alle istituzioni impegnate nel contesto mutevole del mercato dei media, al fine di accompagnarne le strategie comunicative, la costruzione dell’offerta, l’analisi del consumo e la definizione delle policies in modo consapevole ed efficace.  
+                  Le attività di ricerca di OssCom coprono numerose aree e temi, e integrano differenti metodologie, che permettono al cliente di modulare i propri obiettivi secondo diversi livelli di analisi: di prodotto e dell'offerta, delle audience/users e delle pratiche fruitive, di scenario e di contesto.  
+                  Per informazioni: [http://centridiricerca.unicatt.it/osscom](centridiricerca.unicatt.it/osscom)
+
+        .spacer-20
+        .clicked-text
 
 
 

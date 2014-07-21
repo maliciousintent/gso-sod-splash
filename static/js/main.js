@@ -1,5 +1,5 @@
 /*jshint browser:true, laxcomma:true, eqnull:true, indent:2, unused:true, undef:true, devel:true*/
-/*globals $, Swipe, isMobile*/
+/*globals $, isMobile*/
 
 
 $(function () {
@@ -10,8 +10,29 @@ $(function () {
   $('.fadeIn').addClass('show');
 
 
-  //  -- speakers --
+  $('.f-partners img').click(function (e) {
+    e.preventDefault();
+    var _el = $(this);
 
+    if (!$(_el).hasClass('active')) {
+      $('.f-partners img').removeClass('active');
+      $(_el).addClass('active');
+      $('.clicked-text').slideUp(300, 'linear', function () {
+        $('.clicked-text').html($('.text', $(_el).parent()).html());
+        $('.clicked-text').slideDown(300, 'linear');
+      });
+    } else {
+      $('.f-partners img').removeClass('active');
+      $('.clicked-text').slideUp(300, 'linear', function () {
+        $('.clicked-text').html('');
+      });
+    }
+
+    return false;
+  });
+
+
+  //  -- speakers --
   $('.single-speaker .pic, .single-speaker h2').click(function (e) {
     e.preventDefault();
     if (!$(this).hasClass('active')) {
