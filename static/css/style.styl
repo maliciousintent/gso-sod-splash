@@ -255,9 +255,9 @@ body
     h1
       @extends .montserrat
       margin-bottom 30px
-      border-bottom 2px solid rgba(_white, 0.5)
-      display inline-block
-      padding-bottom 2px
+      span
+        border-bottom 3px solid rgba(_white, 0.5)
+        padding-bottom 2px
 
   #programma
     #agenda
@@ -290,7 +290,7 @@ body
           &.circle-azure
             background _azureH
         .border
-          border-right 3px solid rgba(_white, 0)
+          border-right 3px dotted rgba(_white, 0)
           margin-right 20px
           &.border-yellow
             border-color _yellowH
@@ -300,6 +300,13 @@ body
             border-color _greenH
           &.border-azure
             border-color _azureH
+        .valign
+          position relative
+          .text
+            position absolute
+            top 50%
+            left 0
+            transform translate(0px, -50%)
         .text
           &:first-child
             .padding
@@ -560,12 +567,18 @@ body
         &.partner
           margin 0
 
+    #programma,
+    #relatori,
+    #iscriviti
+      h1
+        text-align center
+
     #programma
       #agenda
         .row
           .border
             border-right 0px!important
-            border-bottom 5px solid rgba(_white, 0)
+            border-bottom 5px dotted rgba(_white, 0)
             margin-right 0px!important
             margin-bottom 20px
             padding-bottom 5px
@@ -577,6 +590,13 @@ body
               border-color rgba(_greenH, 0.75)
             &.border-azure
               border-color rgba(_azureH, 0.75)
+          .valign
+            .text
+              position relative
+              top auto
+              left auto
+              transform none
+              text-align center
 
     #iscriviti
       #subscribe-form
