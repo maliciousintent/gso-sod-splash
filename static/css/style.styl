@@ -2,14 +2,15 @@
 @import('nib');
 
 //  - load webfonts from Google
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
-@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Montserrat:400,700|Roboto+Slab');
 
 //  - font style
 .open-sans
   font-family 'Open Sans', sans-serif
 .montserrat
   font-family 'Montserrat', sans-serif
+.roboto-slab
+  font-family 'Roboto Slab', serif
 
 
 //  - colors and other vars
@@ -316,12 +317,24 @@ body
           h2
             margin 10px 0
           h3
-            margin-bottom 20px
+            margin-bottom 10px
+          h2,
+          h3,
+          h4
+            a
+              color _white
+              transition color 0.5s ease, border-color 0.5s ease
+              text-decoration none
+              border-bottom 1px dotted _white
+              &:hover
+                color _green
+                border-color _green
           p,
           ul li
             font-size 15px
             line-height 20px
           ul
+            margin-bottom 10px
             li
               list-style-type none
               margin 2px 0
@@ -331,52 +344,51 @@ body
                 display inline-block
                 margin-right 5px
                 border-bottom 2px solid rgba(_white, 0.5)
+              span
+                @extends .roboto-slab
 
   #relatori
-    #speakers-thumbs
-      _picSize = 90px
-      span.pic
-        display inline-block
-        width _picSize
-        height _picSize
-        border-radius ((_picSize + 3) / 2)
-        overflow hidden
-        margin 0 10px 10px 0
-        cursor pointer
-        border 3px solid rgba(_white, 0.75)
-        transition border-color
-        img
-          transition opacity 0.5s ease
-          opacity 0.5
-          width 100%
-          height auto
-          border-radius 50%
-        &.active
-          border-color _green
-          img
-            opacity 1
-      
-    #speakers-bios
-      .swipe
-        overflow hidden
-        visibility hidden
-        position relative
-        .swipe-wrap
-          overflow hidden
-          position relative
-          & > div
-            float left
-            width 100%
-            position relative
-
     #speakers
-      .slide
-        font-size 14px
-        color _white
-        a
+      .single-speaker
+        _picSize = 90px
+        span.pic
+          width _picSize
+          height _picSize
+          border-radius ((_picSize + 3) / 2)
+          overflow hidden
+          margin 0 10px 10px 0
+          cursor pointer
+          border 3px solid rgba(_white, 0.75)
+          transition border-color
+          img
+            transition opacity 0.2s ease
+            opacity 0.5
+            width 100%
+            height auto
+            border-radius 50%
+          &.active
+            border-color _green
+            img
+              opacity 1
+        h2
+          transition color
+          &.active
+            color _green
+        h2,
+        span.pic
+          display inline-block
+          vertical-align middle
+          cursor pointer
+        .text
+          display none
+          font-size 14px
           color _white
-          border-bottom 2px solid rgba(_white, 0.5)
-          text-decoration none
+          @extends .roboto-slab
+          line-height 24px
+          a
+            color _white
+            border-bottom 2px solid rgba(_white, 0.5)
+            text-decoration none
 
   #iscriviti
     p
@@ -393,6 +405,9 @@ body
         font-weight 600
         border-bottom 2px solid rgba(_white, 0.5)
     #subscribe-form
+      small
+        display block
+        margin-bottom 20px
       input,
       textarea
         border 3px solid #aaa
@@ -414,6 +429,7 @@ body
       button
         margin-top 20px
         background _green
+        border-radius 4px
         i,
         span
           display inline-block

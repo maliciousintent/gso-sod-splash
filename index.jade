@@ -106,25 +106,38 @@ block programma
             .pure-u-1.pure-u-md-1-3
               .text.tc
                 .padding.border.border-yellow
-                  
+                  .spacer-20
                   .circle.circle-yellow
                     span 9:30 - 11:30
-
-                  //-h4 9:30 - 11:30
                   h2 Tavola rotonda
-                  h3 Dalla comunità alla community
+                  h3 Dalla comunità alle community
+                  .spacer-10
             .pure-u-1.pure-u-md-2-3
               .text
                 .padding
+                  h3 Chairman
+                  ul
+                    li 
+                      span Luca Solari  
+                      | – Hitrea
+                  .spacer-30
                   h3 Relatori
                   ul
-                    li Luca Solari – Hitrea
-                    li Marco Vitale – Fondazione Olivetti
-                    li Elisabetta Caldera – Vodafone
-                    li Nicola Palmarini – Arepo Bp
-                    li Paolo Zanenga – TWG Consulting
-                    li Piermarco Aroldi – OssCom
-
+                    li 
+                      span Marco Vitale 
+                      | – Fondazione Olivetti
+                    li 
+                      span Elisabetta Caldera 
+                      | – Vodafone
+                    li 
+                      span Nicola Palmarini 
+                      | – Arepo Bp
+                    li 
+                      span Paolo Zanenga 
+                      | – TWG Consulting
+                    li 
+                      span Piermarco Aroldi 
+                      | – OssCom
 
           .spacer-70
 
@@ -132,30 +145,32 @@ block programma
             .pure-u-1.pure-u-md-1-3
               .text.tc
                 .padding.border.border-orange
-                  
+                  .spacer-20
                   .circle.circle-orange
                     span
                       | 11:45 - 12:00
                       br
                       | 12:25 - 12:45
-                  //-h4 11:45 - 12:00
-                    br
-                    | 12:25 - 12:45
-                  h2 Smart Speech
+                  h2 I processi del 
+                    a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+                  .spacer-10
             .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h3 Relatori
+                  h3 Smart Speech
                   ul
                     li 
                       i SALA 1 
-                      | A. Donadio, Community Enabling
+                      span A. Donadio, 
+                      | Community Enabling
                     li
                       i SALA 2
-                      | C. Colombo, Social Portal
+                      span C. Colombo, 
+                      | Digital &amp; Social Enviroment
                     li 
                       i SALA 3 
-                      | A. Galardi, Social Engagement
+                      span A. Galardi, 
+                      | Social Engagement
 
           .spacer-70
 
@@ -163,37 +178,35 @@ block programma
             .pure-u-1.pure-u-md-1-3
               .text.tc
                 .padding.border.border-orange
-                  
+                  .spacer-20
                   .circle.circle-orange
                     span
                       | 12:05 - 12:20
                       br
                       | 12:45 - 13:00
-
-                  //-h4 12:05 - 12:20
-                    br
-                    | 12:45 - 13:00
-                  h2 Smarth Speech
+                  h2 I processi del 
+                    a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+                  .spacer-10
             .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h3 Relatori
+                  h3 Smart Speech
                   ul
                     li 
                       i SALA 1 
-                      | V. Marini, Social Recruiting e Employer branding
+                      span V. Marini, 
+                      | Social Recruiting e Employer branding
                     li 
                       i SALA 2 
-                      | R. Pezza, Social Learning
+                      span R. Pezza, 
+                      | Social Learning
 
           .spacer-70
 
           .row.pure-g
             .pure-u-1.pure-u-md-1-3
               .text.tc
-                .padding.border  
-                  //-.padding.border.border-green
-                  //- h4 13:30 - 14:30
+                .padding.border
                   .circle.circle-green
                     span
                       | 13:30 - 14:30
@@ -205,15 +218,17 @@ block programma
             .pure-u-1.pure-u-md-1-3
               .text.tc
                 .padding.border.border-azure
+                  .spacer-20
                   .circle.circle-azure
                     span
                       | 14:30 - 16:30
-                  //-h4 14:30 - 16:30
-                  h2 Workshop
+                  h2 Strategia e Governance della 
+                    a(href='http://twitter.com/hashtag/SocialOrg?f=realtime', target='_blank') #SocialOrg
+                  .spacer-10
             .pure-u-1.pure-u-md-2-3
               .text
                 .padding
-                  h3 Relatori
+                  h3 Workshop
                   ul
                     li 
                       i SALA 1 
@@ -230,63 +245,57 @@ block programma
           .row.pure-g
             .pure-u-1.pure-u-md-1-3
               .text.tc
-                //-.padding.border.border-green
                 .padding.border
                   .circle.circle-green
                     span
                       | 17:00
-                  //-h4 17:00
                   h2 Conclusione
 
 
 
 block relatori
   .pure-g
-    .pure-u-1.pure-u-md-1-6
+    .pure-u-1.pure-u-md-1-2
       .pl.pr
         h1 Relatori
 
-        #speakers-thumbs
-          span.pic.active
-            img(src='static/img/relatori/luca-solari.jpg', data-speaker-id='0')
-          span.pic
-            img(src='static/img/relatori/piermarco-aroldi.jpg', data-speaker-id='1')
-          span.pic
-            img(src='static/img/relatori/paolo-zanenga.jpg', data-speaker-id='2')
+        #speakers
 
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/luca-solari.jpg')
+            h2 Luca Solari
+            .text
+              :markdown
+                E' professore ordinario di Organizzazione e Gestione delle Risorse Umane all'Università degli Studi di Milano e docente del MBA del MIP-Politecnico. Ha conseguito il dottorato di ricerca in economia aziendale presso l'Università Luigi Bocconi di Milano. Ha un'esperienza significativa nella progettazione ed erogazione di programmi di cambiamento per Executive, con attività di coaching, formazione e consulenza basata sulla ricerca. Riveste oggi il ruolo di Corporate Sensemaker, Blogger e Social Media experimenter interessato al futuro delle organizzazioni.  
+                Nel 2013 è stato il primo e unico italiano a essere invitato come Keynote speaker alla Global Conference di HRPS a Denver, Colorado. È Academic in Residence per Executive Network. All'Academy of Management Conference di Philadelphia dell'agosto del 2014 un suo paper riceverà il Best Paper Award della HR Division.
 
-    .pure-u-1.pure-u-md-1-2#speakers-bios
+              .spacer-20
 
-      .spacer-50
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/piermarco-aroldi.jpg')
+            h2 Piermarco Aroldi
+            .text
+              :markdown
+                Professore Associato presso la Facoltà di Scienze della Formazione di Milano e Piacenza, dove insegna "Sociologia dei processi culturali e comunicativi", "Media e culture dell'infanzia" e "Teorie e tecniche dei nuovi media".  
+                Dopo la laurea in Lettere moderne e il Diploma di specializzazione in Scienze della comunicazione ha conseguito il Dottorato di ricerca in Sociologia e metodologia della ricerca sociale; si occupa di sociologia della comunicazione e della cultura, con particolare attenzione all'ambito dei media; i suoi interessi scientifici si collocano nell'area degli studi sull'audience e l'esperienza mediale, soprattutto televisiva e online, sul rapporto media-minori e sulla media literacy. E' membro italiano dei network <a href="http://www.eukidsonline.net" target="_blank">Eu Kids Online</a> e <a href="http://www.netchildrengomobile.eu/" target="_blank">Net Children Go Mobile</a>, e della Cost Action IS096 <a href="http://www.cost-transforming-audiences.eu/" target="_blank">Transforming Audiences, Transforming Societies</a>; fa inoltre parte del Comitato di redazione della rivista Comunicazioni Sociali.  
+                Dal 2013 dirige  OssCom, Centro di ricerca sui media e la comunicazione dell'Università Cattolica.
 
-      #speakers.swipe
-        .swipe-wrap
+              .spacer-20
 
-          .slide(data-slide-id='0')
-            .pl.pr
-              h2 Luca Solari
-              .text
-                :markdown
-                  E' professore ordinario di Organizzazione e Gestione delle Risorse Umane all'Università degli Studi di Milano e docente del MBA del MIP-Politecnico. Ha conseguito il dottorato di ricerca in economia aziendale presso l'Università Luigi Bocconi di Milano. Ha un'esperienza significativa nella progettazione ed erogazione di programmi di cambiamento per Executive, con attività di coaching, formazione e consulenza basata sulla ricerca. Riveste oggi il ruolo di Corporate Sensemaker, Blogger e Social Media experimenter interessato al futuro delle organizzazioni. Nel 2013 è stato il primo e unico italiano a essere invitato come Keynote speaker alla Global Conference di HRPS a Denver, Colorado. È Academic in Residence per Executive Network. All'Academy of Management Conference di Philadelphia dell'agosto del 2014 un suo paper riceverà il Best Paper Award della HR Division.
+          .single-speaker
+            span.pic
+              img(src='static/img/relatori/paolo-zanenga.jpg')
+            h2 Paolo Zanenga
+            .text
+              :markdown
+                Ingegnere, ha svolto attività di ricerca negli Stati Uniti, in Francia e in Italia nel campo della strategia e dell'organizzazione.Tiene un corso sulla complessità delle reti della conoscenza presso la Scuola di Dottorato del Politecnico di Torino, è docente presso Polidesign e Domus Academy, visiting speaker in Copenhagen Business School, SDA Bocconi, Parsons New School di NewYork e in altre accademie italiane e internazionali.  
+                Lavora su nuovi modelli dell'innovazione e dell'impresa, anche avvalendosi di reti internazionali di accademie e aziende. Fin dall'inizio della sua attività, si è dedicato a temi di frontiera riguardanti il rapporto tra tecnologie e organizzazioni. Nel 2010 la pubblicazione de “Le Reti di Diotima – Società della conoscenza ed economia della bellezza” per Carocci, porta alla fondazione della Diotima Society, associazione culturale internazionale che promuove, organizza, e sperimenta reti di conoscenza locali e globali, in modo da favorire superiori livelli di collaborazione tra imprese, istituzioni, comunità e singole persone. Fondatore di TWG Consulting, ha seguito importanti progetti di trasformazione e sviluppo (Finmeccanica, Ciba, Nestlè, Pfizer, GE, Telecom Italia,Governo Russo).  
+                E' CEO di Natam; membro dei “conclavi” di Dream:in; Presidente di PDMA per il Sud Europa; Membro della commissione Ricerca e Innovazione di Confindustria; Membro della rete internazionale Value Creation Group (Business Process Management).
 
-          .slide(data-slide-id='1')
-            .pl.pr
-              h2 Piermarco Aroldi
-              .text
-                :markdown
-                  Professore Associato presso la Facoltà di Scienze della Formazione di Milano e Piacenza, dove insegna "Sociologia dei processi culturali e comunicativi", "Media e culture dell'infanzia" e "Teorie e tecniche dei nuovi media".  
-                  Dopo la laurea in Lettere moderne e il Diploma di specializzazione in Scienze della comunicazione ha conseguito il Dottorato di ricerca in Sociologia e metodologia della ricerca sociale; si occupa di sociologia della comunicazione e della cultura, con particolare attenzione all'ambito dei media; i suoi interessi scientifici si collocano nell'area degli studi sull'audience e l'esperienza mediale, soprattutto televisiva e online, sul rapporto media-minori e sulla media literacy. E' membro italiano dei network <a href="http://www.eukidsonline.net" target="_blank">Eu Kids Online</a> e <a href="http://www.netchildrengomobile.eu/" target="_blank">Net Children Go Mobile</a>, e della Cost Action IS096 <a href="http://www.cost-transforming-audiences.eu/" target="_blank">Transforming Audiences, Transforming Societies</a>; fa inoltre parte del Comitato di redazione della rivista Comunicazioni Sociali.  
-                  Dal 2013 dirige  OssCom, Centro di ricerca sui media e la comunicazione dell'Università Cattolica.
+              .spacer-20
 
-          .slide(data-slide-id='2')
-            .pl.pr
-              h2 Paolo Zanenga
-              .text
-                :markdown
-                  Ingegnere, ha svolto attività di ricerca negli Stati Uniti, in Francia e in Italia nel campo della strategia e dell'organizzazione.Tiene un corso sulla complessità delle reti della conoscenza presso la Scuola di Dottorato del Politecnico di Torino, è docente presso Polidesign e Domus Academy, visiting speaker in Copenhagen Business School, SDA Bocconi, Parsons New School di NewYork e in altre accademie italiane e internazionali.  
-                  Lavora su nuovi modelli dell'innovazione e dell'impresa, anche avvalendosi di reti internazionali di accademie e aziende. Fin dall'inizio della sua attività, si è dedicato a temi di frontiera riguardanti il rapporto tra tecnologie e organizzazioni. Nel 2010 la pubblicazione de “Le Reti di Diotima – Società della conoscenza ed economia della bellezza” per Carocci, porta alla fondazione della Diotima Society, associazione culturale internazionale che promuove, organizza, e sperimenta reti di conoscenza locali e globali, in modo da favorire superiori livelli di collaborazione tra imprese, istituzioni, comunitàe singole persone.  
-                  Fondatore di TWG Consulting, ha seguito importanti progetti di trasformazione e sviluppo (tra i clienti Finmeccanica, Ciba, Nestlè, Pfizer, GE, Telecom Italia,Governo Russo).  
-                  E' CEO di Natam, azienda di Knowledge Engineering; membro dei “conclavi” di Dream:in, iniziativa internazionale riconosciuta dalla rivista Metropolis come uno dei 6 “game changers” nel mondo del design e dell'innovazione; Presidente di PDMA (associazione internazionale degli innovatori) per il Sud Europa; Membro della commissione Ricerca e Innovazione di Confindustria; Membro della rete internazionale Value Creation Group (Business Process Management).
 
 
 
@@ -308,10 +317,8 @@ block iscriviti
           | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
 
         form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='//hitrea.us8.list-manage.com/subscribe/post?u=d006ae2613ee762f9e573e14d&amp;id=7bb2dc85b6', target='_blank')
-          p
-            | I campi con 
-            b * 
-            | sono obbligatori.
+          small
+            | I campi con * sono obbligatori.
 
           label(for='mce-FNAME') Nome e cognome*
           input(type='text', id='mce-FNAME', name='FNAME', required)
