@@ -263,7 +263,8 @@ body
 
   #programma,
   #relatori,
-  #iscriviti
+  #iscriviti,
+  #letture
     h1
       @extends .montserrat
       margin-bottom 30px
@@ -414,6 +415,25 @@ body
           h2
             color _green
 
+  #letture
+    ul
+      margin 0
+      padding 0
+      li
+        margin 0 0 10px 20px
+        font-size 14px
+        line-height 24px
+        a
+          color _white
+          text-decoration none
+          border-bottom 2px solid rgba(_white, 0.5)
+          transition color 0.5s ease, border-color 0.5s ease
+          @extends .roboto-slab
+          font-size 18px
+          &:hover
+            color _green
+            border-color _green
+
   #iscriviti
     p
       code
@@ -516,8 +536,9 @@ body
       ul
         margin 0
         li
-          margin 0 1%
+          margin 5px 1% 0 1%
           display inline-block
+          width 48%
           span
             display block
 
