@@ -315,11 +315,13 @@ body
             border-color _azureH
         .valign
           position relative
+            /*
           .text
             position absolute
             top 50%
             left 0
             transform translate(0px, -50%)
+            */
         .text
           &:first-child
             .padding
@@ -612,6 +614,20 @@ body
     #iscriviti
       h1
         text-align center
+
+    #relatori
+      #speakers
+        .single-speaker
+          text-align center
+          margin-bottom 20px
+          span.pic
+            display block
+            margin 0 auto 10px auto
+          h2
+            font-size 1em
+            display block
+          .text
+            text-align left
 
     #programma
       #agenda
