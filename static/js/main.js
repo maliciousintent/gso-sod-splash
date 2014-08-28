@@ -99,4 +99,20 @@ $(function () {
   });
 
 
+  $('#subscribe-form').submit(function () {
+    var form = $(this);
+    var requireds = $('input[required]', $(form)).length;
+    var notempties = 0;
+
+    $('input[required]', $(form)).each(function(a, b) {
+      if ($(b).val().trim().length !== 0) {
+        notempties += 1;
+      }
+    });
+
+    if (notempties !== requireds) {
+      return false;
+    }
+  });
+
 });
