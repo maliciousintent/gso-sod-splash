@@ -184,8 +184,6 @@ body
       text-transform uppercase
       font-weight 700
       font-size 32px
-    .subscribe
-      clearfix()
     p
       &.when
         @extends .montserrat
@@ -486,6 +484,30 @@ body
           margin-left 5px
           @extends .montserrat
           text-transform uppercase
+
+  .subscribe-btn-blue
+    box-sizing border-box
+    position relative
+    box-shadow inset 0 1px 0 rgba(_white,0.5), 0 2px 2px rgba(_black,0.2), 0 0 4px 1px rgba(_black,0.1)
+    display block
+    width 315px
+    background #2980b9
+    border none
+    box-shadow none
+    border-radius 50px
+    overflow hidden
+    @extends .montserrat
+    text-transform uppercase
+    padding 15px 0
+    margin 0
+    cursor pointer
+    transition 0.5s ease background
+    &:hover
+      background #3498db
+
+  a.subscribe-btn-blue
+    color _white
+    text-decoration none
         
 
 
@@ -591,6 +613,7 @@ body
           height auto!important
       .subscribe
         text-align center
+        clearfix()
         .subscribe-btn
           width 100%
           display block

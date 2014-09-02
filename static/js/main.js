@@ -99,6 +99,23 @@ $(function () {
   });
 
 
+  $('.smooth-scroll').click(function (e) {
+    e.preventDefault();
+
+    var _whereToScroll = $('#' + $(this).attr('data-click')).position().top;
+
+    $('html, body').animate({
+      scrollTop: _whereToScroll - 50
+    }, 500);
+
+    $('#menu li').removeClass('active');
+    $('#menu li[data-click="' + $(this).attr('data-click') + '"]').addClass('active');
+
+
+    return false;
+  });
+
+
   $('#subscribe-form').submit(function () {
     var form = $(this);
     var requireds = $('input[required]', $(form)).length;

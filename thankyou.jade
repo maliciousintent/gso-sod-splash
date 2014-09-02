@@ -1,0 +1,51 @@
+extends layout/layout
+
+
+block main
+  .pure-g
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+        .spacer-40
+        h5#hashtags.transition.fadeIn
+          i.fa.fa-twitter.twitter-icon
+          span 
+            a(href='http://twitter.com/hashtag/SOday14?f=realtime', target='_blank') #SOday14 
+          span
+            a(href='http://twitter.com/hashtag/SocialOrg?f=realtime', target='_blank') #SocialOrg 
+          span
+            a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
+        .spacer-10
+
+
+
+    .pure-u-1.pure-u-md-1-2
+
+
+
+    .pure-u-1.pure-u-md-1-2
+      .pl.pr
+
+        img#logo.transition.fadeIn(src='static/img/logo-white@2x.png')
+
+        h2.transition.fadeIn
+          | Dalla comunit&agrave;
+          br
+          | alle community
+        
+        p.when.transition.fadeIn
+          span.uppercase
+            | Milano, 20 novembre 2014
+        
+        .spacer-60
+        
+        h1.transition.fadeIn
+          | Grazie per esserti iscritto!
+        .spacer-10
+        p.transition.fadeIn
+          | Riceverai i futuri aggiornamenti all'indirizzo e-mail che hai lasciato.
+
+
+        .spacer-60
+        
+        .tc
+          a.subscribe-btn-blue(href='/') Torna alla homepage

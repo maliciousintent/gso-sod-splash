@@ -30,27 +30,13 @@ html(prefix='og: http://ogp.me/ns#')
   body
     .gradient
 
-    #top-mobile
-      ul
-        li(data-click='top')
-          span Torna in cima
+    block mobileTop
+
 
 
     .container
 
-      #menu.transition.fadeIn
-        ul
-          li(data-click='programma')
-            span Programma
-          li(data-click='relatori')
-            span Relatori
-          li(data-click='letture')
-            span Letture
-          li(data-click='iscriviti')
-            span Iscriviti
-
-      .spacer-50
-
+      block menu
 
       #main
 
