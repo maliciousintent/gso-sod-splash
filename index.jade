@@ -17,6 +17,8 @@ block menu
         span Letture
       li(data-click='iscriviti')
         span Iscriviti
+      li(data-click='location')
+        span Location
 
   .spacer-50
 
@@ -65,6 +67,16 @@ block main
         p.when.transition.fadeIn
           span.uppercase
             | Milano, 20 novembre 2014
+
+        p.location.transition.fadeIn
+          span.uppercase
+            | Spazio Camplus,
+            br
+          span
+            | via Stamira d'Ancona 25
+            br
+          span
+            small.smooth-scroll(data-click='location') Come raggiungerci
         
         p.abstract.transition.fadeIn
           | Cosa accade quando la sfida dei social media si gioca all'interno dell'organizzazione?
@@ -667,3 +679,86 @@ block iscriviti
           button.pure-button.pure-button-primary(type='submit')
             i.fa.fa-check
             span Iscriviti all'evento
+
+
+block location
+  .pure-g
+    .pure-u-1.pure-u-md-2-3
+      .pl.pr
+        h1
+          span Location
+        .spacer-40
+        .text
+          :markdown
+            ###In auto###
+            Dalla tangenziale est prendere l'uscita n. 10 via Palmanova.  
+            Continuare sul Cavalcavia Cascina Gobba e su via Palmanova. Girare a destra in via San Giovanni De la Salle e poi a sinistra in via Padova.  
+            Imboccare, a destra, via Francesco Cavezzali. Proseguire dritto fino a via Stamira D'Ancona n. 25.  
+            &nbsp;  
+
+            ###In treno###
+            Dalla Stazione Centrale prendere la MM2 (verde) in direzione Cascina Gobba fino a Loreto e poi la MM1 (rossa) in direzione Sesto FS, fino alla fermata Turro.  
+            &nbsp;  
+
+            ###In aereo###
+            __Dall'Aeroporto Linate__:  
+            - A51 o Tangenziale est uscita 10 via Palmanova  
+            - Autobus n. 73 fino a San Babila. MM1 linea rossa in direzione Sesto FS, scendere a Turro  
+            - Shuttle per la Stazione Centrale e poi MM2 linea verde in direzione Cascina Gobba fino a Loreto, MM1 in direzione Sesto FS, fino a Turro  
+            &nbsp;  
+
+            __Dall'Aeroporto Malpensa__:
+            - Shuttle per la Stazione Centrale. MM2 in direzione Cascina Gobba fino a Loreto, MM1 in direzione Sesto FS fino a Turro  
+            - Malpensa Express fino alla Stazione Nord Cadorna, MM1 in direzione Sesto FS fino a Turro
+
+        .spacer-60
+        #g-map(style='width: 100%; height:400px;')
+        #g-map-infos(style='display:none')
+          .g-map-infos-text
+            h4 Camplus Living Turro
+            p via Stamira d'Ancona 25
+
+
+
+block scripts
+  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBAOjKWKkV5wgbuCw0aGKjigk7mDYrRi-Y&sensor=false')
+  script.
+    google.maps.event.addDomListener(window, 'load', init);
+
+    NodeList.prototype.forEach = Array.prototype.forEach;
+    HTMLCollection.prototype.forEach = Array.prototype.forEach;
+    
+    function init() {
+
+      var mapElement = document.getElementById('g-map');
+      var centerCoords = new google.maps.LatLng(45.501324,9.226284);
+      var pinLocation = new google.maps.LatLng(45.501738, 9.228324); // indirizzo location
+      var mapPinInfo = new google.maps.InfoWindow({
+        content: document.getElementById('g-map-infos').innerHTML
+      });
+      var mapOptions = {
+        zoom: 15,
+        center: centerCoords, 
+        disableDefaultUI: true,
+        scrollwheel: false,
+        styles: [{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#C6E2FF"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#C5E3BF"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#D1D1B8"}]}]
+      };
+      var map = new google.maps.Map(mapElement, mapOptions);
+      var mapPin = new google.maps.Marker({
+        position: pinLocation,
+        map: map,
+        icon: '/static/img/map-marker.png'
+      });
+
+      window.google.maps.event.addDomListener(window, 'resize', function() {
+        map.setCenter(centerCoords);
+      });
+
+      window.google.maps.event.addListener(mapPin, 'click', function() {
+        mapPinInfo.open(map, mapPin)
+      });
+
+      mapPinInfo.open(map, mapPin);
+      
+    }
+

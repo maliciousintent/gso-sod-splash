@@ -74,6 +74,13 @@ html(prefix='og: http://ogp.me/ns#')
 
         block iscriviti
 
+      .spacer-150
+
+
+      #location.transition.fadeIn
+
+          block location
+
 
       .spacer-100
 
@@ -86,6 +93,8 @@ html(prefix='og: http://ogp.me/ns#')
     |ga('create', 'UA-52406942-1', 'auto');
     |ga('send', 'pageview');
     |</script>
+
+    block scripts
 
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(type='text/javascript', src='static/js/vendor/isMobile.min.js')

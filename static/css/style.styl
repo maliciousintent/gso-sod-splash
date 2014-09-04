@@ -53,6 +53,8 @@ for _val in (1..15)
 .pr
   padding-right _padding
 
+.smooth-scroll
+  cursor pointer
 
 h1,
 h2,
@@ -185,7 +187,8 @@ body
       font-weight 700
       font-size 32px
     p
-      &.when
+      &.when,
+      &.location
         @extends .montserrat
         font-weight 400
         font-size 15px
@@ -194,6 +197,7 @@ body
             text-transform uppercase
         small
           font-weight 400
+          border-bottom 2px solid rgba(_white, 0.40)
 
     .abstract
       //-width 340px
@@ -262,7 +266,8 @@ body
   #programma,
   #relatori,
   #iscriviti,
-  #letture
+  #letture,
+  #location
     h1
       @extends .montserrat
       margin-bottom 30px
@@ -484,6 +489,29 @@ body
           margin-left 5px
           @extends .montserrat
           text-transform uppercase
+
+  #location
+    h3
+      border-bottom 2px solid rgba(_white, 0.20)
+      display inline-block
+    p,
+    li
+      font-size 90%
+    ul
+      margin 0
+      padding 0
+      li
+        margin-left 20px
+    .g-map-infos-text
+      overflow auto
+      color #333!important
+      width 200px
+      height 60px
+      h4
+        text-transform uppercase
+        margin-bottom 5px
+      p
+        margin 0
 
   .subscribe-btn-green
     box-sizing border-box
