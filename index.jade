@@ -74,7 +74,7 @@ block main
         .subscribe.transition2.fadeIn
           
           .tc
-            p.subscribe-btn-blue.smooth-scroll(data-click='iscriviti') Iscriviti all'evento!
+            p.subscribe-btn-green.smooth-scroll(data-click='iscriviti') Iscriviti all'evento!
 
           .spacer-10
           p.tc oppure
@@ -601,19 +601,6 @@ block letture
             a(href='http://robertopezza.com/2014/06/16/car-sharing-2-0-e-linsegnamento-per-il-social-learning/', target='_blank')
               | Car Sharing 2.0 e l'insegnamento per il Social Learning
             span &nbsp;di Roberto Pezza
-          //-
-            li
-              a(href='http://www.socialenterprise.it/index.php/2010/11/12/un-modello-di-maturita-per-il-social-business/', target='_blank')
-                | Un modello di maturità per il Social Business
-              span &nbsp;di Emanuele Quintarelli
-            li
-              a(href='http://www.socialenterprise.it/index.php/2014/07/06/the-collaborative-knowledge-ecosystem/', target='_blank')
-                | L'Ecosistema Collaborativo della Conoscenza
-              span &nbsp;di Emanuele Quintarelli
-            li
-              a(href='http://www.socialenterprise.it/en/index.php/2013/05/03/hr-the-unwanted-link-in-social-business/', target='_blank')
-                | HR: The unwanted link in Social Business
-              span &nbsp;di Emanuele Quintarelli
 
 
 
@@ -625,6 +612,8 @@ block iscriviti
         h1 
           span Iscriviti all'evento
         p
+          | Iscrizioni aperte fino ad esaurimento posti.
+        p
           | L'iscrizione prevede un costo di euro 600,00 (+ IVA alle aliquote di legge vigenti), da versare via bonifico bancario a 
           code
             | Hitrea Srl
@@ -635,6 +624,9 @@ block iscriviti
           | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
           br
           | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
+        p
+          small
+            i Eventuali disdette comunicate con un <b>preavviso inferiore a 15 giorni</b> rispetto alla data dell’iniziativa, daranno diritto al rimborso del solo 50% della quota prevista. Disdette comunicate con un <b>preavviso pari o inferiore a 5 giorni</b> NON daranno diritto al rimborso della quota.
 
         form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='https://www.youform.me/api/form/29298ab4-3558-402c-b0f3-5231d1908cb9')
           small
