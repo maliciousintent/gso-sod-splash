@@ -86,10 +86,10 @@ body
     z-index 1
     width 100%
     height 100%
-    background rgba(_black, 0.45)
+    background rgba(_black, 0.55)
     transition background 0.5s ease
     &.with-text
-      background rgba(_black, 0.75)
+      background rgba(_black, 0.80)
 
   .container
     position relative
@@ -544,6 +544,26 @@ body
     text-decoration none
         
 
+.survey
+  @extends .montserrat
+  background rgba(_green, 0.3)
+  padding 20px
+  margin-left -20px
+  max-width 340px
+  text-align center
+  //border 2px solid rgba(_white, 0.6)
+  a
+    text-decoration none
+    border-bottom 2px solid rgba(_white, 0)
+    transition all 0.5s ease
+    color _white
+    font-size 15px
+    line-height 24px
+    &:hover
+      border-color _white
+  span
+    font-size 18px
+    line-height 28px
 
 //  - for media queries see http://purecss.io/grids/ @ Default Media Queries
 
@@ -719,6 +739,14 @@ body
         textarea,
         button
           width 100%
+  
+  .survey
+    max-width 100%
+    margin 0
+
+  .hide-mobile
+    display none
+    
 
 //  - import other styles
 @import 'form'
