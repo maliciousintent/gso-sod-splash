@@ -81,7 +81,7 @@ $(function () {
 
 
   //  -- menu click --
-  $('#menu li').click(function (e) {
+  $('#menu li').not('.not-scroll').click(function (e) {
     e.preventDefault();
 
     if (!$(this).hasClass('active')) {
