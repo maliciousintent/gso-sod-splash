@@ -49,14 +49,15 @@ block main
       .pl.pr
         .partners.transition.fadeIn
           .tl.box
-            img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
+            a(href='http://hitrea.eu', target='_blank')
+              img.partner.partner-bigger(src='static/img/partners/partner-hitrea.png', alt='Hitrea', style='margin: 0;')
             small.tl.fix
               b Hitrea 
               | è membro di 
               b GSO Company
           .tl.box
             img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 15px;')
-      .spacer-50
+      .spacer-20
 
 
     .pure-u-1.pure-u-md-1-2
@@ -130,6 +131,9 @@ block main
 
       .pl.pr
         .partners.f-partners.transition.fadeIn
+          a(href='http://socialorganizationblog.hitrea.eu', target='_blank')
+            img.partner-bigger(src='static/img/partners/soblog.png', alt='Social Organization Blog')
+          .spacer-20
           .box.tl(style='margin-right:45px;')
             h5
               span Con il patrocinio di
@@ -702,7 +706,7 @@ block iscriviti
           small
             i Eventuali disdette comunicate con un <b>preavviso inferiore a 15 giorni</b> rispetto alla data dell'iniziativa, daranno diritto al rimborso del solo 50% della quota prevista. Disdette comunicate con un <b>preavviso pari o inferiore a 5 giorni</b> NON daranno diritto al rimborso della quota.
 
-        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='https://www.youform.me/api/form/29298ab4-3558-402c-b0f3-5231d1908cb9')
+        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='https://www.youform.me/api/form/b457f21e-ced7-4bf5-8b1e-5c431b0ce4f2')
           small
             | I campi con * sono obbligatori.
 

@@ -10,20 +10,20 @@ $(function () {
   $('.fadeIn').addClass('show');
 
 
-  $('.f-partners img').click(function (e) {
+  $('.f-partners img').not('.partner-bigger').click(function (e) {
     e.preventDefault();
     var _el = $(this);
 
     if (!$(_el).hasClass('active')) {
       $('.f-partners img').removeClass('active');
       $(_el).addClass('active');
-      $('.clicked-text').slideUp(300, 'linear', function () {
+      $('.clicked-text').slideUp(300, function () {
         $('.clicked-text').html($('.text', $(_el).parent()).html());
-        $('.clicked-text').slideDown(300, 'linear');
+        $('.clicked-text').slideDown(300);
       });
     } else {
       $('.f-partners img').removeClass('active');
-      $('.clicked-text').slideUp(300, 'linear', function () {
+      $('.clicked-text').slideUp(300, function () {
         $('.clicked-text').html('');
       });
     }
