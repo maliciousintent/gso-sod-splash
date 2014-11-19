@@ -405,8 +405,6 @@ body
                 @extends .roboto-slab
 
   #relatori
-    p.montserrat
-      text-align center
     #speakers
       .single-speaker
         _picSize = 90px
@@ -621,8 +619,8 @@ body
   body
     .container
       width 960px
-  .green-box
-    margin-left 150px
+    .green-box
+      margin-left 150px
 
 @media screen and (max-width: 48em)
   _padding = 10px
@@ -633,6 +631,11 @@ body
 
   body
     
+    .green-box
+      width 80%
+      margin 0
+      padding 5% 10%
+
     #main
       p.location
         text-align center
@@ -816,11 +819,6 @@ body
     text-align center
     p.bigger
       margin-bottom 20px!important
-      
-  .green-box
-    width 80%
-    margin 0
-    padding 5% 10%
 
 //  - import other styles
 @import 'form'
