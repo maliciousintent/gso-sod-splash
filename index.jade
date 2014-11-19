@@ -21,7 +21,7 @@ block menu
         span Iscriviti
       li(data-click='location')
         span Location
-      li.not-scroll
+      //-li.not-scroll
         span
           a(href='mailto:segreteria@hitrea.it') Accredito stampa
 
@@ -29,7 +29,9 @@ block menu
 
 block main
   .pure-g
+
     .pure-u-1.pure-u-md-1-2
+
       .pl.pr
         .spacer-40
         h5#hashtags.transition.fadeIn
@@ -41,8 +43,6 @@ block main
           span
             a(href='http://twitter.com/hashtag/SocialHR?f=realtime', target='_blank') #SocialHR
         .spacer-10
-
-
 
     .pure-u-1.pure-u-md-1-2
       .spacer-10
@@ -59,6 +59,15 @@ block main
             img.partner.no-margin(src='static/img/partners/partner-luoghi.png', alt='Luoghi di Relazione', style='margin-top: 15px;')
       .spacer-20
 
+    .pure-u-1
+      .pl.pr
+        .green-box
+          h1.tc Grazie a tutti!
+          p.tc Abbiamo raggiunto il numero massimo di partecipanti!
+          p.tc
+            span.smooth-scroll(data-click='iscriviti') Vuoi restare aggiornato?
+
+      .spacer-50
 
     .pure-u-1.pure-u-md-1-2
       .pl.pr
@@ -230,65 +239,80 @@ block iscriviti
       .pl.pr
         h1 
           span Iscriviti all'evento
-        p
-          | Iscrizioni aperte fino ad esaurimento posti.
-        p
-          | L'iscrizione prevede un costo di 600 euro. 
-          span.bigger
-            strong Se ti iscrivi entro il 26 settembre il costo della partecipazione è di 480 euro
-          | &nbsp;(pi&ugrave; IVA alle aliquote di legge vigenti) da versare via bonifico bancario a:
-          code
-            | Hitrea Srl
-            br
-            br
-            | IBAN IT23X0303211705010000000427BICSELBIT2BXXX
-        p
-          | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
+
+        h2
+          | Grazie a tutti!
+        p.bigger
+          | Abbiamo raggiunto il numero massimo di partecipanti!
           br
-          | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
-        p
-          small
-            i Eventuali disdette comunicate con un <b>preavviso inferiore a 15 giorni</b> rispetto alla data dell'iniziativa, daranno diritto al rimborso del solo 50% della quota prevista. Disdette comunicate con un <b>preavviso pari o inferiore a 5 giorni</b> NON daranno diritto al rimborso della quota.
+          | See you next year!
+        p.bigger(style='margin-bottom: 5px;') Resta aggiornato!
+        form.send_email_form.pure-form.pure-form-stacked#stay-update(method='post', action='http://hitrea.us8.list-manage1.com/subscribe/post?u=d006ae2613ee762f9e573e14d&id=8999585e26', target='_blank', onSubmit='return confirm("Procedendo la mail inserita verrà utilizzata esclusivamente per comunicazioni riguardanti il meeting e per elaborazioni amministrative interne. Continuare?");')
+          .input-elements
+            input(type='hidden', name='b_d006ae2613ee762f9e573e14d_8999585e26', tabindex='-1', value='')
+            input#mce-EMAIL.email-input.required(type='email', name='EMAIL', placeholder='Il tuo indirizzo e-mail', required='required', data-validation-type='email')
+            button.pure-button.pure-button-primary.email-btn(name='submit_email') Conferma
 
-        form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='https://www.youform.me/api/form/b457f21e-ced7-4bf5-8b1e-5c431b0ce4f2')
-          small
-            | I campi con * sono obbligatori.
+        //-
+          p
+            | Iscrizioni aperte fino ad esaurimento posti.
+          p
+            | L'iscrizione prevede un costo di 600 euro. 
+            span.bigger
+              strong Se ti iscrivi entro il 26 settembre il costo della partecipazione è di 480 euro
+            | &nbsp;(pi&ugrave; IVA alle aliquote di legge vigenti) da versare via bonifico bancario a:
+            code
+              | Hitrea Srl
+              br
+              br
+              | IBAN IT23X0303211705010000000427BICSELBIT2BXXX
+          p
+            | Per i possessori di promo code è <b>OBBLIGATORIO</b> il suo inserimento nel form sottostante.
+            br
+            | Riceverete una mail di conferma dell'avvenuta iscrizione al meeting una volta verificati i Vs dati e l'addebito del bonifico effettuato.
+          p
+            small
+              i Eventuali disdette comunicate con un <b>preavviso inferiore a 15 giorni</b> rispetto alla data dell'iniziativa, daranno diritto al rimborso del solo 50% della quota prevista. Disdette comunicate con un <b>preavviso pari o inferiore a 5 giorni</b> NON daranno diritto al rimborso della quota.
 
-          label(for='nome-cognome') Nome e cognome*
-          input(type='text', id='nome-cognome', name='nome-cognome', required)
+          form#subscribe-form.pure-form.pure-form-stacked(method='POST', action='https://www.youform.me/api/form/b457f21e-ced7-4bf5-8b1e-5c431b0ce4f2')
+            small
+              | I campi con * sono obbligatori.
 
-          label(for='email') Indirizzo e-mail*
-          input(type='email', id='email', name='email', required)
+            label(for='nome-cognome') Nome e cognome*
+            input(type='text', id='nome-cognome', name='nome-cognome', required)
 
-          label(for='azienda') Azienda*
-          input(type='text', id='azienda', name='azienda', required)
+            label(for='email') Indirizzo e-mail*
+            input(type='email', id='email', name='email', required)
 
-          label(for='ruolo') Ruolo*
-          input(type='text', id='ruolo', name='ruolo', required)
+            label(for='azienda') Azienda*
+            input(type='text', id='azienda', name='azienda', required)
 
-          label(for='telefono') Telefono*
-          input(type='text', id='telefono', name='telefono', required)
+            label(for='ruolo') Ruolo*
+            input(type='text', id='ruolo', name='ruolo', required)
 
-          label(for='cro-bonifico') Riferimento CRO bonifico*
-          input(type='text', id='cro-bonifico', name='cro-bonifico', required)
+            label(for='telefono') Telefono*
+            input(type='text', id='telefono', name='telefono', required)
 
-          label(for='intestazione-fattura') Intestazione fattura
-          textarea(type='text', id='intestazione-fattura', name='intestazione-fattura')
+            label(for='cro-bonifico') Riferimento CRO bonifico*
+            input(type='text', id='cro-bonifico', name='cro-bonifico', required)
 
-          label(for='email-per-fattura') Indirizzo e-mail spedizione fattura
-          input(type='email', id='email-per-fattura', name='email-per-fattura')
+            label(for='intestazione-fattura') Intestazione fattura
+            textarea(type='text', id='intestazione-fattura', name='intestazione-fattura')
 
-          label(for='accettazione-dati-personali') 
-            input(type='checkbox', id ='accettazione-dati-personali', name='accettazione-dati-personali', required)
-            | &nbsp; Autorizzo al trattamento dei miei dati personali*
+            label(for='email-per-fattura') Indirizzo e-mail spedizione fattura
+            input(type='email', id='email-per-fattura', name='email-per-fattura')
 
-          label(for='autorizzazione-riprese') 
-            input(type='checkbox', id ='autorizzazione-riprese', name='autorizzazione-riprese', required)
-            | &nbsp; Autorizzo la ripresa audio-video e la sua diffusione a mezzo web*
+            label(for='accettazione-dati-personali') 
+              input(type='checkbox', id ='accettazione-dati-personali', name='accettazione-dati-personali', required)
+              | &nbsp; Autorizzo al trattamento dei miei dati personali*
 
-          button.pure-button.pure-button-primary(type='submit')
-            i.fa.fa-check
-            span Iscriviti all'evento
+            label(for='autorizzazione-riprese') 
+              input(type='checkbox', id ='autorizzazione-riprese', name='autorizzazione-riprese', required)
+              | &nbsp; Autorizzo la ripresa audio-video e la sua diffusione a mezzo web*
+
+            button.pure-button.pure-button-primary(type='submit')
+              i.fa.fa-check
+              span Iscriviti all'evento
 
 
 block location

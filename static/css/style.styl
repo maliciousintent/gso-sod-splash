@@ -73,6 +73,28 @@ h6
   line-height 100%
 
 
+.green-box
+  background rgba(_green, 0.5)
+  width 500px
+  margin 0 0 0 250px
+  padding 20px 30px
+  h1,
+  p
+    margin 0
+  h1
+    margin-bottom 10px
+  p
+    @extends .montserrat
+    font-size 18px
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 5px
+    span.smooth-scroll
+      cursor pointer
+      border-bottom 3px solid rgba(#fff, 0.4)
+      
+
+
 //  - main style
 html,
 body
@@ -383,6 +405,8 @@ body
                 @extends .roboto-slab
 
   #relatori
+    p.montserrat
+      text-align center
     #speakers
       .single-speaker
         _picSize = 90px
@@ -472,7 +496,8 @@ body
       strong
         font-weight 600
         border-bottom 2px solid rgba(_white, 0.5)
-    #subscribe-form
+    #subscribe-form,
+    #stay-update
       small
         display block
         margin-bottom 20px
@@ -506,6 +531,17 @@ body
           margin-left 5px
           @extends .montserrat
           text-transform uppercase
+    #stay-update
+      input.email-input,
+      button
+        display inline-block
+      input.email-input
+        width 275px
+        margin-right 20px
+      button
+        border 3px solid _green
+        text-transform uppercase
+        @extends .montserrat
 
   #location
     h3
@@ -585,6 +621,8 @@ body
   body
     .container
       width 960px
+  .green-box
+    margin-left 150px
 
 @media screen and (max-width: 48em)
   _padding = 10px
@@ -594,6 +632,13 @@ body
     padding-right _padding
 
   body
+    
+    #main
+      p.location
+        text-align center
+        img.turro
+          display inline
+          margin-bottom 10px
     
     #top-mobile
       display block
@@ -761,6 +806,21 @@ body
   .hide-mobile
     display none
     
+  #stay-update
+    input.email-input,
+    button
+      display block!important
+      width 100%!important
+      margin 0 0 10px 0
+  #iscriviti
+    text-align center
+    p.bigger
+      margin-bottom 20px!important
+      
+  .green-box
+    width 80%
+    margin 0
+    padding 5% 10%
 
 //  - import other styles
 @import 'form'
